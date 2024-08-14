@@ -10,6 +10,8 @@ readme = "README.md"
 python = "^3.9"
 click = "*"
 importlib-metadata = ">=8.2.0"
+pygithub = "^2.3.0"
+oaklib = "^0.6.14"
 
 [tool.poetry.group.dev.dependencies]
 pytest = {version = ">=8.3.2"}
@@ -28,7 +30,7 @@ sphinx-click = {version = ">=4.3.0"}
 myst-parser = {version = ">=0.18.1"}
 
 [tool.poetry.scripts]
-onto-diff-curator = "onto_diff_curator.cli:main"
+curate = "onto_diff_curator.cli:main"
 
 [tool.poetry-dynamic-versioning]
 enable = true
