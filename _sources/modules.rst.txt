@@ -1,0 +1,7 @@
+onto_diff_curator
+=================
+
+.. toctree::
+   :maxdepth: 4
+
+   onto_diff_curator
