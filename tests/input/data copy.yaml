@@ -1,0 +1,142 @@
+pull_request_8057:
+  body: "@twhetzel and @joeflack4 have identified a few cases in #8055 where provenance\
+    \ was annotated inconsistently. All of these cases, and more, are fixed in this\
+    \ PR.\r\n\r\ncheck the details in https://github.com/monarch-initiative/mondo/commit/42b13b3318d7cae3e0d39187c9ca5039ff228b85\
+    \ but the gist of it is: there are only very select specific cases where a property\
+    \ other than oio:source should be used."
+  changed_files:
+  - filename: src/ontology/mondo-edit.obo
+    url_in_pr: https://github.com/monarch-initiative/mondo/blob/fa62aeb39ef9dbdcdaf713fec9b48cf37cfc855c/src/ontology/mondo-edit.obo
+    url_on_main: https://github.com/monarch-initiative/mondo/blob/950787e0125cad12ab2e2f3a57dd421f345f2af4/src/ontology/mondo-edit.obo
+  comments: []
+  issue_closed:
+  - body: "The property used to annotate the provenance of an `excluded_synonym` is\
+      \ not consistent in mondo-edit.obo.\r\n\r\n```\r\n$ grep 'excluded_synonym'\
+      \ mondo-edit.obo \r\nproperty_value: excluded_synonym \"adult Fanconi Anemia\"\
+      \ xsd:string {source=\"DOID:1062\"}\r\nproperty_value: excluded_synonym \"Lateral\
+      \ Wall of bladder\" xsd:string {source=\"DOID:11593\"}\r\nproperty_value: excluded_synonym\
+      \ \"supraglottis\" xsd:string {source=\"DOID:13476\"}\r\nproperty_value: excluded_synonym\
+      \ \"animal viral hepatitis\" xsd:string {source=\"DOID:1884\"}\r\nproperty_value:\
+      \ excluded_synonym \"Contractural arachnodactyly\" xsd:string {source=\"GUARD:0006975\"\
+      }\r\nproperty_value: excluded_synonym \"familial dysautonomia, type II\" xsd:string\
+      \ {source=\"DOID:0050548\"}\r\nproperty_value: excluded_synonym \"Cutis hyperelastica\"\
+      \ xsd:string {xref=\"DOID:13359\", xref=\"SCTID:238848002\", xref=\"SCTID:398114001\"\
+      , xref=\"UMLS:C0013720\", xref=\"icd11.foundation:1122707206\"}\r\nproperty_value:\
+      \ excluded_synonym \"India rubber skin\" xsd:string {xref=\"SCTID:398114001\"\
+      }\r\n```\r\n\r\nThis was found by Joe during work for the Synonym Sync project\
+      \ in order to _not_ suggest adding back an excluded synonym.\r\n\r\nWhich property,\
+      \ e.g. `xref` or `source`, should be used for the provenance annotations for\
+      \ an excluded_synonym?"
+    comments:
+    - "I have added comprehensive QC for this issue (and many other related issues)\
+      \ in #8056. The gist of it is:\r\n\r\nBy default we should only be using `oio:source`\
+      \ for provenance. Exceptions:\r\n    \r\n1. Synonyms use XREF for metadata\r\
+      \n2. Definitions use XREF for metadata\r\n\r\nAdding this QC revealed 50 or\
+      \ so metadata issues in Mondo that I fixed, so it was great fun to do so! (OCD\
+      \ cleaning mode)"
+    - Nice to have the rules succinctly stated and of course have QC for this.
+    labels:
+    - tech
+    number: 8055
+    title: Property used to represent provenance for excluded_synonym is not consistent
+  labels: []
+  number: 8057
+  title: Fixing axiom annotation properties in mondo-edit
+pull_request_8056:
+  body: "Fixes #8055 \r\n\r\n@twhetzel and @joeflack4 have identified a few cases\
+    \ in #8055 where provenance was annotated inconsistently. Here I go much further\
+    \ and add a QC check that ensures that _all_ axiom assertions are using the correct\
+    \ property.\r\n\r\nI have already fixed all these, and will wait for QC to fail\
+    \ as a proof the PR works"
+  changed_files:
+  - filename: src/ontology/mondo-edit.obo
+    url_in_pr: https://github.com/monarch-initiative/mondo/blob/f9735f5a7c841d0a51a7c28790d90d44528bac34/src/ontology/mondo-edit.obo
+    url_on_main: https://github.com/monarch-initiative/mondo/blob/80dbea67864a9c91a375fcc142d8bf0e2ba723ed/src/ontology/mondo-edit.obo
+  comments: []
+  issue_closed:
+  - body: "The property used to annotate the provenance of an `excluded_synonym` is\
+      \ not consistent in mondo-edit.obo.\r\n\r\n```\r\n$ grep 'excluded_synonym'\
+      \ mondo-edit.obo \r\nproperty_value: excluded_synonym \"adult Fanconi Anemia\"\
+      \ xsd:string {source=\"DOID:1062\"}\r\nproperty_value: excluded_synonym \"Lateral\
+      \ Wall of bladder\" xsd:string {source=\"DOID:11593\"}\r\nproperty_value: excluded_synonym\
+      \ \"supraglottis\" xsd:string {source=\"DOID:13476\"}\r\nproperty_value: excluded_synonym\
+      \ \"animal viral hepatitis\" xsd:string {source=\"DOID:1884\"}\r\nproperty_value:\
+      \ excluded_synonym \"Contractural arachnodactyly\" xsd:string {source=\"GUARD:0006975\"\
+      }\r\nproperty_value: excluded_synonym \"familial dysautonomia, type II\" xsd:string\
+      \ {source=\"DOID:0050548\"}\r\nproperty_value: excluded_synonym \"Cutis hyperelastica\"\
+      \ xsd:string {xref=\"DOID:13359\", xref=\"SCTID:238848002\", xref=\"SCTID:398114001\"\
+      , xref=\"UMLS:C0013720\", xref=\"icd11.foundation:1122707206\"}\r\nproperty_value:\
+      \ excluded_synonym \"India rubber skin\" xsd:string {xref=\"SCTID:398114001\"\
+      }\r\n```\r\n\r\nThis was found by Joe during work for the Synonym Sync project\
+      \ in order to _not_ suggest adding back an excluded synonym.\r\n\r\nWhich property,\
+      \ e.g. `xref` or `source`, should be used for the provenance annotations for\
+      \ an excluded_synonym?"
+    comments:
+    - "I have added comprehensive QC for this issue (and many other related issues)\
+      \ in #8056. The gist of it is:\r\n\r\nBy default we should only be using `oio:source`\
+      \ for provenance. Exceptions:\r\n    \r\n1. Synonyms use XREF for metadata\r\
+      \n2. Definitions use XREF for metadata\r\n\r\nAdding this QC revealed 50 or\
+      \ so metadata issues in Mondo that I fixed, so it was great fun to do so! (OCD\
+      \ cleaning mode)"
+    - Nice to have the rules succinctly stated and of course have QC for this.
+    labels:
+    - tech
+    number: 8055
+    title: Property used to represent provenance for excluded_synonym is not consistent
+  - body: "The property used to annotate the provenance of an `excluded_synonym` is\
+      \ not consistent in mondo-edit.obo.\r\n\r\n```\r\n$ grep 'excluded_synonym'\
+      \ mondo-edit.obo \r\nproperty_value: excluded_synonym \"adult Fanconi Anemia\"\
+      \ xsd:string {source=\"DOID:1062\"}\r\nproperty_value: excluded_synonym \"Lateral\
+      \ Wall of bladder\" xsd:string {source=\"DOID:11593\"}\r\nproperty_value: excluded_synonym\
+      \ \"supraglottis\" xsd:string {source=\"DOID:13476\"}\r\nproperty_value: excluded_synonym\
+      \ \"animal viral hepatitis\" xsd:string {source=\"DOID:1884\"}\r\nproperty_value:\
+      \ excluded_synonym \"Contractural arachnodactyly\" xsd:string {source=\"GUARD:0006975\"\
+      }\r\nproperty_value: excluded_synonym \"familial dysautonomia, type II\" xsd:string\
+      \ {source=\"DOID:0050548\"}\r\nproperty_value: excluded_synonym \"Cutis hyperelastica\"\
+      \ xsd:string {xref=\"DOID:13359\", xref=\"SCTID:238848002\", xref=\"SCTID:398114001\"\
+      , xref=\"UMLS:C0013720\", xref=\"icd11.foundation:1122707206\"}\r\nproperty_value:\
+      \ excluded_synonym \"India rubber skin\" xsd:string {xref=\"SCTID:398114001\"\
+      }\r\n```\r\n\r\nThis was found by Joe during work for the Synonym Sync project\
+      \ in order to _not_ suggest adding back an excluded synonym.\r\n\r\nWhich property,\
+      \ e.g. `xref` or `source`, should be used for the provenance annotations for\
+      \ an excluded_synonym?"
+    comments:
+    - "I have added comprehensive QC for this issue (and many other related issues)\
+      \ in #8056. The gist of it is:\r\n\r\nBy default we should only be using `oio:source`\
+      \ for provenance. Exceptions:\r\n    \r\n1. Synonyms use XREF for metadata\r\
+      \n2. Definitions use XREF for metadata\r\n\r\nAdding this QC revealed 50 or\
+      \ so metadata issues in Mondo that I fixed, so it was great fun to do so! (OCD\
+      \ cleaning mode)"
+    - Nice to have the rules succinctly stated and of course have QC for this.
+    labels:
+    - tech
+    number: 8055
+    title: Property used to represent provenance for excluded_synonym is not consistent
+  labels: []
+  number: 8056
+  title: Xrefs on axioms and most annotation assertions should use oio:source
+pull_request_8040:
+  body: "Fixes #8039 \r\n\r\nNot sure if there will be some legitimate self loops,\
+    \ so lets see what the test will complain about."
+  changed_files:
+  - filename: src/ontology/mondo-edit.obo
+    url_in_pr: https://github.com/monarch-initiative/mondo/blob/8709665a75cd61dee67da4567b50cd8f14318f82/src/ontology/mondo-edit.obo
+    url_on_main: https://github.com/monarch-initiative/mondo/blob/c61e9b927466c135add4315b61678cc259184379/src/ontology/mondo-edit.obo
+  comments: []
+  issue_closed:
+  - body: "Hi Mondo Team,\r\n\r\nWe continue to see self-edge loop complexities in\
+      \ the base file. Is this expected? It is causing issues in our load. I expect\
+      \ that there may be more lurking about.\r\n\r\n\r\n<img width=\"1158\" alt=\"\
+      Screenshot 2024-08-07 at 10 01 34\u202FAM\" src=\"https://github.com/user-attachments/assets/afd8d614-62f5-40ed-bc60-a24ac814c050\"\
+      >\r\n"
+    comments:
+    - 'Thanks for the report. Our cycle check previously was closed to some specific
+      properties; now I am trying to extent the check to all properties and see how
+      that goes: https://github.com/monarch-initiative/mondo/pull/8040'
+    labels:
+    - QC
+    number: 8039
+    title: Self Edge Loop MONDO:0008945
+  labels: []
+  number: 8040
+  title: Extend self loop check to all properties
