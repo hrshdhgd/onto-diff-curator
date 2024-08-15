@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Union
 
 import requests
+import requests_cache
 import yaml
 from github import Github, RateLimitExceededException
 from oaklib import get_adapter
@@ -15,6 +16,9 @@ from oaklib.io.streaming_kgcl_writer import StreamingKGCLWriter
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+# Initialize requests_cache
+requests_cache.install_cache("github_cache", expire_after=1800)  # Cache for 30 minutes
 
 PROJECT_DIR = Path(__file__).parents[2]
 REPO_RESOURCE_MAP = {
@@ -167,8 +171,8 @@ def analyze_repo(repo: str, output_file: str):
 
     if not output_file:
         output_file = PROJECT_DIR / f"{repo.replace('/', '_')}/rag_input.yaml"
-        if output_file.exists():
-            output_file.unlink()
+        if Path(output_file).exists():
+            Path(output_file).unlink()
     # Analyze data
     with open(output_file, "a") as of:
         for pr_number, content in data.items():
@@ -225,8 +229,7 @@ def analyze_repo(repo: str, output_file: str):
                     writer.emit(change)
 
                 # Capture the content written to the in-memory file-like object
-                # TODO investigate what causes the "create None" line in oaklib.
-                all_changes = [op for op in output.getvalue().splitlines() if op != "create None"]
+                all_changes = output.getvalue().splitlines()
             # Create a new YAML file with the changes
             output_dict = {
                 pr_number: {
