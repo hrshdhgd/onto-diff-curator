@@ -166,9 +166,8 @@ def analyze_repo(repo: str, output_file: str):
     # Analyze data
     with open(output_file, "a") as of:
         for pr_number, content in data.items():
-            # TODO remove the replace() since it is fixed in scrape.
-            url_in_pr = content["changed_files"][0]["url_in_pr"].replace("blob", "raw")
-            url_on_main = content["changed_files"][0]["url_on_main"].replace("blob", "raw")
+            url_in_pr = content["changed_files"][0]["url_in_pr"]
+            url_on_main = content["changed_files"][0]["url_on_main"]
             extension = url_in_pr.split(".")[-1]
             new_file_path = TMP_DIR / f"new.{extension}"
             old_file_path = TMP_DIR / f"old.{extension}"
