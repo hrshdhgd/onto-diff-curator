@@ -16,9 +16,10 @@ from oaklib.io.streaming_kgcl_writer import StreamingKGCLWriter
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-PWD = Path(__file__).parent
+PROJECT_DIR = Path(__file__).parents[2]
 REPO_FILE_MAP = {
     "monarch-initiative/mondo": "mondo-edit.obo",
+    "pato-ontology/pato": "pato-edit.obo",
 }
 
 
@@ -153,15 +154,15 @@ def analyze_repo(repo: str, output_file: str):
     :param repo: Org/name of the GitHub repo.
     :param output_file: Path to the output YAML file.
     """
-    DATA_PATH = PWD / f"{repo.replace('/', '_')}/data.yaml"
-    TMP_DIR = PWD / f"{repo.replace('/', '_')}" / "tmp"
+    DATA_PATH = PROJECT_DIR / f"{repo.replace('/', '_')}/data.yaml"
+    TMP_DIR = PROJECT_DIR / f"{repo.replace('/', '_')}" / "tmp"
     makedirs(TMP_DIR, exist_ok=True)
     with open(DATA_PATH, "r") as file:
         data = yaml.safe_load(file)
     logging.info(f"Analyzing data for repo: {repo}")
 
     if not output_file:
-        output_file = PWD / f"{repo.replace('/', '_')}/rag_input.yaml"
+        output_file = PROJECT_DIR / f"{repo.replace('/', '_')}/rag_input.yaml"
     # Analyze data
     with open(output_file, "a") as of:
         for pr_number, content in data.items():
