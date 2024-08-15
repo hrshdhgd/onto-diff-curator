@@ -44,7 +44,7 @@ all: $(REPOS)
 # Target to scrape individual repositories
 $(REPOS):
 	@echo "Starting scrape for repo $@..."
-	@time curate scrape --repo $@ --token $(GITHUB_ACCESS_TOKEN) > /dev/null 2>&1
+	@time ontodiff scrape --repo $@ --token $(GITHUB_ACCESS_TOKEN) > /dev/null 2>&1
 	@echo "Scrape completed for repo $@."
 
 # Phony target to scrape all repositories cumulatively
