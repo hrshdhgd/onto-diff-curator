@@ -1080,13 +1080,13 @@ linkml-runtime = ">=1.1.24"
 
 [[package]]
 name = "kgcl-schema"
-version = "0.6.8"
+version = "0.6.9"
 description = "Schema for the KGCL project."
 optional = false
 python-versions = "<4.0,>=3.9"
 files = [
-    {file = "kgcl_schema-0.6.8-py3-none-any.whl", hash = "sha256:84deb921203c5b94c9fa6386e7fec24593162abbccdadeb78a5f7231c0c75803"},
-    {file = "kgcl_schema-0.6.8.tar.gz", hash = "sha256:7520e8fc7cd1546e3212ae868fae410720c4f2cea0e0a5e85ac277f63941d8bd"},
+    {file = "kgcl_schema-0.6.9-py3-none-any.whl", hash = "sha256:6acd367a4cd998ec8dfe70987bf797aecce558df86a1395bc8c3e0489f66b9a9"},
+    {file = "kgcl_schema-0.6.9.tar.gz", hash = "sha256:1bb0f9f13356df7b5c6ba9c73a7124dc897e525af49f40454dafd45bfca021bd"},
 ]
 
 [package.dependencies]
@@ -1581,13 +1581,13 @@ files = [
 
 [[package]]
 name = "oaklib"
-version = "0.6.14"
+version = "0.6.15"
 description = "Ontology Access Kit: Python library for common ontology operations over a variety of backends"
 optional = false
 python-versions = "<4.0.0,>=3.9"
 files = [
-    {file = "oaklib-0.6.14-py3-none-any.whl", hash = "sha256:addd99b50d8123867d09c1012b4c6a82096bec8b2d584567b70f02b000b32977"},
-    {file = "oaklib-0.6.14.tar.gz", hash = "sha256:53e53551a1ae63d8df3323627b17ef54b975640422a0a9234f34effebf5c47d4"},
+    {file = "oaklib-0.6.15-py3-none-any.whl", hash = "sha256:909c7ade94cde559b8615c4d81946fef22b822114cc91f50601c89f196681a64"},
+    {file = "oaklib-0.6.15.tar.gz", hash = "sha256:bcf189bc473b08d7d692716b7f3faa58271f74544da73d2411ade6cb7dd92f0a"},
 ]
 
 [package.dependencies]
@@ -1601,7 +1601,7 @@ eutils = ">=0.6.0"
 funowl = ">=0.2.0"
 jsonlines = "*"
 kgcl-rdflib = "0.5.0"
-kgcl-schema = ">=0.6.8,<0.7.0"
+kgcl-schema = ">=0.6.9,<0.7.0"
 linkml-renderer = ">=0.3.0"
 linkml-runtime = ">=1.5.3"
 ndex2 = ">=3.5.0"
@@ -3317,4 +3317,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "06bf50a529354ea8b1fb05b0fad4aa96eb31d580af15ae3b7abdb01007a246f4"
+content-hash = "973dcebb7884696833e6b6a1c0bd956f742e354fcb1250f3c2d80a46e98ebc33"
