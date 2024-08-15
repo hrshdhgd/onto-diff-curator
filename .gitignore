@@ -127,4 +127,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-src/onto_diff_curator/*/tmp/*
+*/tmp/*
