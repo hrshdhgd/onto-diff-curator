@@ -22,7 +22,7 @@ poetry install
 
 ## Scrape the repository
 
-> **:warning:** You'll need a GitHub token stored in your environment as var name `GITHUB_ACCESS_TOKEN`.
+> **:warning:** You'll need a GitHub token stored as any environment variable name (`GITHUB_ACCESS_TOKEN` in this case).
 
 ```shell
 curate scrape --repository monarch-initiative/mondo --token $(GITHUB_ACCESS_TOKEN)
