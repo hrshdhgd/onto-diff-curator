@@ -17,9 +17,13 @@ from oaklib.io.streaming_kgcl_writer import StreamingKGCLWriter
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 PROJECT_DIR = Path(__file__).parents[2]
-REPO_FILE_MAP = {
+REPO_RESOURCE_MAP = {
     "monarch-initiative/mondo": "mondo-edit.obo",
     "pato-ontology/pato": "pato-edit.obo",
+    "EnvironmentOntology/envo": "envo-edit.owl",
+    "obophenotype/uberon": "uberon-edit.obo",
+    "obophenotype/cell-ontology": "cl-edit.owl",
+    "geneontology/go-ontology": "go-edit.obo",
 }
 
 
@@ -49,7 +53,7 @@ def scrape_repo(repo: str, token: str, output_file: Union[Path, str]) -> None:
     """
     logging.info(f"Starting scrape for repo: {repo}")
     g = Github(token)
-    file_of_interest = REPO_FILE_MAP.get(repo)
+    file_of_interest = REPO_RESOURCE_MAP.get(repo)
     repository = g.get_repo(repo)
 
     # Set default output file path if not provided
@@ -163,6 +167,8 @@ def analyze_repo(repo: str, output_file: str):
 
     if not output_file:
         output_file = PROJECT_DIR / f"{repo.replace('/', '_')}/rag_input.yaml"
+        if output_file.exists():
+            output_file.unlink()
     # Analyze data
     with open(output_file, "a") as of:
         for pr_number, content in data.items():
@@ -173,12 +179,12 @@ def analyze_repo(repo: str, output_file: str):
             old_file_path = TMP_DIR / f"old.{extension}"
 
             # Download the files
-            # 1. Download the file from the PR and name it new.obo
+            # 1. Download the file from the PR and name it new.obo/new.owl
             response_pr = requests.get(url_in_pr, timeout=10)
             with open(new_file_path, "wb") as file:
                 file.write(response_pr.content)
 
-            # 2. Download the file from the main branch and name it old.obo
+            # 2. Download the file from the main branch and name it old.obo/old.owl
             response_main = requests.get(url_on_main, timeout=10)
             with open(old_file_path, "wb") as file:
                 file.write(response_main.content)
@@ -219,7 +225,8 @@ def analyze_repo(repo: str, output_file: str):
                     writer.emit(change)
 
                 # Capture the content written to the in-memory file-like object
-                all_changes = output.getvalue().splitlines()
+                # TODO investigate what causes the "create None" line in oaklib.
+                all_changes = [op for op in output.getvalue().splitlines() if op != "create None"]
             # Create a new YAML file with the changes
             output_dict = {
                 pr_number: {
