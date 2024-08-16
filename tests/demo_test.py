@@ -2,7 +2,7 @@
 
 import unittest
 
-from onto_diff_curator import __version__
+from ontodiff_curator import __version__
 
 
 class TestVersion(unittest.TestCase):

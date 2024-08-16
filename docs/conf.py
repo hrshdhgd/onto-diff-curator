@@ -5,7 +5,7 @@
 import os
 from datetime import date
 
-from onto_diff_curator import __version__
+from ontodiff_curator import __version__
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information

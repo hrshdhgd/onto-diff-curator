@@ -6,8 +6,8 @@ from typing import Union
 
 import click
 
-from onto_diff_curator import __version__
-from onto_diff_curator.main import analyze_repo, scrape_repo
+from ontodiff_curator import __version__
+from ontodiff_curator.main import analyze_repo, scrape_repo
 
 __all__ = [
     "main",
