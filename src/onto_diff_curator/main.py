@@ -170,7 +170,7 @@ def analyze_repo(repo: str, output_file: str):
     logging.info(f"Analyzing data for repo: {repo}")
 
     if not output_file:
-        output_file = PROJECT_DIR / f"{repo.replace('/', '_')}/rag_input.yaml"
+        output_file = PROJECT_DIR / f"{repo.replace('/', '_')}/data_with_changes.yaml"
         if Path(output_file).exists():
             Path(output_file).unlink()
     # Analyze data
