@@ -4,7 +4,7 @@
   "checkout": null,
   "context": {
     "cookiecutter": {
-      "project_name": "onto-diff-curator",
+      "project_name": "ontodiff-curator",
       "github_org_name": "hrshdhgd",
       "__project_slug": "onto_diff_curator",
       "project_description": "Curates differences in ontology resources during pull requests in KGCL format.",

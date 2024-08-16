@@ -1,1 +1,1 @@
-"""Tests for onto-diff-curator."""
+"""Tests for ontodiff-curator."""

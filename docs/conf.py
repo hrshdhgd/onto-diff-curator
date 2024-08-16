@@ -10,7 +10,7 @@ from onto_diff_curator import __version__
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "onto-diff-curator"
+project = "ontodiff-curator"
 copyright = f"{date.today().year}, Harshad Hegde <hhegde@lbl.gov>"
 author = "Harshad Hegde <hhegde@lbl.gov>"
 release = __version__

@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "onto-diff-curator"
+name = "ontodiff-curator"
 version = "0.0.0"
-description = "onto-diff-curator"
+description = "ontodiff-curator"
 authors = ["Harshad Hegde <hhegde@lbl.gov>"]
 license = "MIT"
 readme = "README.md"

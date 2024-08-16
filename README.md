@@ -1,4 +1,4 @@
-# onto-diff-curator
+# ontodiff-curator
 
 Curates differences in ontology resources during pull requests in KGCL format using [oaklib](https://github.com/INCATools/ontology-access-kit).
 
@@ -15,8 +15,8 @@ Currently curates diff for the following:
 Currently just clone the git repo and proceed.
 ```shell
 pip install poetry
-git clone https://github.com/hrshdhgd/onto-diff-curator
-cd onto-diff-curator
+git clone https://github.com/hrshdhgd/ontodiff-curator
+cd ontodiff-curator
 poetry install
 ```
 

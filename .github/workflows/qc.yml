@@ -1,4 +1,4 @@
-name: onto-diff-curator QC
+name: ontodiff-curator QC
 
 on:
   push:

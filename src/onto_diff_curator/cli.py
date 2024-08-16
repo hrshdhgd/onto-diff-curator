@@ -1,4 +1,4 @@
-"""Command line interface for onto-diff-curator."""
+"""Command line interface for ontodiff-curator."""
 
 import logging
 from pathlib import Path
@@ -35,7 +35,7 @@ output_option = click.option("-o", "--output-file", help="Path to the output YAM
 @click.version_option(__version__)
 def main(verbose: int, quiet: bool):
     """
-    CLI for onto-diff-curator.
+    CLI for ontodiff-curator.
 
     :param verbose: Verbosity while running.
     :param quiet: Boolean to be quiet or verbose.
@@ -55,7 +55,7 @@ def main(verbose: int, quiet: bool):
 @token_option
 @output_option
 def scrape(repo: str, token: str, output_file: Union[Path, str]):
-    """Run the onto-diff-curator's scrape command."""
+    """Run the ontodiff-curator's scrape command."""
     scrape_repo(repo, token, output_file)
 
 
@@ -63,7 +63,7 @@ def scrape(repo: str, token: str, output_file: Union[Path, str]):
 @repo_option
 @output_option
 def analyze(repo: str, output_file: Union[Path, str]):
-    """Run the onto-diff-curator's analyze command."""
+    """Run the ontodiff-curator's analyze command."""
     analyze_repo(repo, output_file)
 
 

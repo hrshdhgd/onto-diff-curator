@@ -1,4 +1,4 @@
-"""onto-diff-curator package."""
+"""ontodiff-curator package."""
 
 import importlib_metadata
 
