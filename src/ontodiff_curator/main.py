@@ -1,7 +1,10 @@
 """Main module for the OntoDiffCurator package."""
 
+import datetime
 import io
 import logging
+import shutil
+import subprocess
 import time
 from os import makedirs
 from pathlib import Path
@@ -18,7 +21,7 @@ from oaklib.io.streaming_kgcl_writer import StreamingKGCLWriter
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Initialize requests_cache
-requests_cache.install_cache("github_cache", expire_after=1800)  # Cache for 30 minutes
+requests_cache.install_cache("github_cache")
 
 PROJECT_DIR = Path(__file__).parents[2]
 REPO_RESOURCE_MAP = {
@@ -29,6 +32,9 @@ REPO_RESOURCE_MAP = {
     "obophenotype/cell-ontology": "cl-edit.owl",
     "geneontology/go-ontology": "go-edit.obo",
 }
+RAW_DATA_FILENAME = "raw_data.yaml"
+DATA_WITH_CHANGES_FILENAME = "data_with_changes.yaml"
+TMP_DIR_NAME = "tmp"
 
 
 def check_rate_limit(g):
@@ -43,6 +49,58 @@ def check_rate_limit(g):
     reset_timestamp = rate_limit.reset.timestamp()
     current_timestamp = time.time()
     return remaining, reset_timestamp, current_timestamp
+
+
+def remove_import_lines(owl_file: str):
+    """
+    Remove import lines from an OWL file.
+    
+    # ! This is a band-aid fix for OWL files for now. This function will be removed in the future.
+
+    :param owl_file: Path to the OWL file.
+    """
+    try:
+        # Read the content of the OWL file
+        with open(owl_file, 'r') as file:
+            lines = file.readlines()
+
+        # Write back the lines excluding the specified import lines
+        with open(owl_file, 'w') as file:
+            for line in lines:
+                if not line.startswith("Import"):
+                    file.write(line)
+        
+        logging.info(f"Successfully removed specified import lines from {owl_file}")
+
+    except Exception as e:
+        logging.error(f"Error removing import lines from {owl_file}: {e}")
+
+
+def owl2obo(owl_file: str):
+    """
+    Convert OWL file to OBO format.
+
+    :param owl_file: Path to the OWL file.
+    """
+    remove_import_lines(owl_file)
+    obo_file = str(owl_file).replace(".owl", ".obo")
+    catalog_file = PROJECT_DIR / "catalog-v001.xml"
+    command = f'robot remove --catalog {catalog_file} -i {owl_file} --select "imports" --trim false convert --check false -o {obo_file}'
+    command_list = command.split()
+
+    try:
+        result = subprocess.run(command_list, capture_output=True, text=True)
+        # Check if the command was successful
+        if result.returncode == 0:
+            logging.info(f"ROBOT command succeeded: {result.stdout}")
+        else:
+            if "INVALID ONTOLOGY FILE ERROR" in result.stdout:
+                return  0# Skip this file and move to the next iteration
+            else:
+                raise RuntimeError(f"ROBOT command failed: {result.stdout}")
+
+    except Exception as e:
+        raise(f"Error converting OWL to OBO: {e}")
 
 
 def scrape_repo(repo: str, token: str, output_file: Union[Path, str]) -> None:
@@ -62,7 +120,7 @@ def scrape_repo(repo: str, token: str, output_file: Union[Path, str]) -> None:
 
     # Set default output file path if not provided
     if not output_file:
-        output_file = Path.cwd() / f"{repo.replace('/', '_')}/data.yaml"
+        output_file = Path.cwd() / f"{repo.replace('/', '_')}/{RAW_DATA_FILENAME}"
         if output_file.exists():
             output_file.unlink()
 
@@ -108,7 +166,7 @@ def scrape_repo(repo: str, token: str, output_file: Union[Path, str]) -> None:
                 # Get changed files in the PR
                 files = pr.get_files()
                 for file in files:
-                    if file_of_interest in file.filename:
+                    if file.filename.endswith(file_of_interest):
                         # Get the commit SHA of the main branch just before the PR was merged
                         base_commit_sha = pr.base.sha
                         head_commit_sha = pr.head.sha
@@ -162,19 +220,27 @@ def analyze_repo(repo: str, output_file: str):
     :param repo: Org/name of the GitHub repo.
     :param output_file: Path to the output YAML file.
     """
-    DATA_PATH = PROJECT_DIR / f"{repo.replace('/', '_')}/data.yaml"
-    TMP_DIR = PROJECT_DIR / f"{repo.replace('/', '_')}" / "tmp"
+    DATA_PATH = PROJECT_DIR / f"{repo.replace('/', '_')}/{RAW_DATA_FILENAME}"
+    TMP_DIR = PROJECT_DIR / f"{repo.replace('/', '_')}" / TMP_DIR_NAME
     makedirs(TMP_DIR, exist_ok=True)
     with open(DATA_PATH, "r") as file:
         data = yaml.safe_load(file)
     logging.info(f"Analyzing data for repo: {repo}")
 
     if not output_file:
-        output_file = PROJECT_DIR / f"{repo.replace('/', '_')}/data_with_changes.yaml"
-        if Path(output_file).exists():
-            Path(output_file).unlink()
+        output_file = PROJECT_DIR / f"{repo.replace('/', '_')}/{DATA_WITH_CHANGES_FILENAME}"
+
+    # Write metadata to the output file
+    metadata = {
+        "date_executed": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "code_version": "0.0.1",  # Replace with actual version if available
+        "github_url": f"https://github.com/{repo}"
+    }
+        
+
     # Analyze data
-    with open(output_file, "a") as of:
+    with open(output_file, "w") as of:
+        yaml.dump(metadata, of)
         for pr_number, content in data.items():
             url_in_pr = content["changed_files"][0]["url_in_pr"]
             url_on_main = content["changed_files"][0]["url_on_main"]
@@ -193,30 +259,24 @@ def analyze_repo(repo: str, output_file: str):
             with open(old_file_path, "wb") as file:
                 file.write(response_main.content)
 
-            # 3. Run the diff command
-            if extension == "obo":
-                try:
-                    adapter_new = get_adapter(f"simpleobo:{new_file_path}")
-                    adapter_old = get_adapter(f"simpleobo:{old_file_path}")
-                except ValueError as e:
-                    logging.error(f"ValueError: {e}")
-                    continue  # Skip this file and move to the next iteration
-                except Exception as e:
-                    logging.error(f"Error: {e}")
-                    continue  # Skip this file and move to the next iteration
-            elif extension == "owl":
-                try:
-                    adapter_new = get_adapter(f"sqlite:{new_file_path}")
-                    adapter_old = get_adapter(f"sqlite:{old_file_path}")
-                except ValueError as e:
-                    logging.error(f"ValueError: {e}")
-                    continue  # Skip this file and move to the next iteration
-                except Exception as e:
-                    logging.error(f"Error: {e}")
-                    continue  # Skip this file and move to the next iteration
-            else:
-                logging.error(f"Extension {extension} not supported yet.")
-                continue
+            # 3. Run the diff command 
+            if extension == "owl":
+                n = owl2obo(new_file_path)
+                o = owl2obo(old_file_path)
+                if n == 0 or o == 0:
+                    continue
+                old_file_path = old_file_path.with_suffix(".obo")
+                new_file_path = new_file_path.with_suffix(".obo")
+            try:
+                adapter_new = get_adapter(f"simpleobo:{new_file_path}")
+                adapter_old = get_adapter(f"simpleobo:{old_file_path}")
+            # except ValueError as e:
+            #     logging.error(f"ValueError: {e}")
+            #     continue  # Skip this file and move to the next iteration
+            except Exception as e:
+                raise e
+                # logging.error(f"Error: {e}")
+                # continue  # Skip this file and move to the next iteration
 
             all_changes = []
             # Create an in-memory file-like object and use it within a 'with' statement
@@ -243,7 +303,8 @@ def analyze_repo(repo: str, output_file: str):
             }
             yaml.dump(output_dict, of)
             # delete new and old files
-            new_file_path.unlink()
-            old_file_path.unlink()
+            shutil.rmtree(TMP_DIR)
+            makedirs(TMP_DIR, exist_ok=True)
+            
 
     logging.info(f"Analysis completed for repo: {repo}")

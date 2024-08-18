@@ -31,7 +31,7 @@ sphinx-click = {version = ">=4.3.0"}
 myst-parser = {version = ">=0.18.1"}
 
 [tool.poetry.scripts]
-ontodiff = "onto_diff_curator.cli:main"
+ontodiff = "ontodiff_curator.cli:main"
 
 [tool.poetry-dynamic-versioning]
 enable = true

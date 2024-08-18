@@ -25,11 +25,11 @@ jobs:
 
     - name: Build documentation.
       run: |
-        echo ${{ secrets.GH_TOKEN }} >> src/onto_diff_curator/token.txt
+        echo ${{ secrets.GH_TOKEN }} >> src/ontodiff_curator/token.txt
         mkdir gh-pages
         touch gh-pages/.nojekyll
         cd docs/
-        poetry run sphinx-apidoc -o . ../src/onto_diff_curator/ --ext-autodoc -f
+        poetry run sphinx-apidoc -o . ../src/ontodiff_curator/ --ext-autodoc -f
         poetry run sphinx-build -b html . _build
         cp -r _build/* ../gh-pages/
 

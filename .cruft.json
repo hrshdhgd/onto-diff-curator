@@ -6,7 +6,7 @@
     "cookiecutter": {
       "project_name": "ontodiff-curator",
       "github_org_name": "hrshdhgd",
-      "__project_slug": "onto_diff_curator",
+      "__project_slug": "ontodiff_curator",
       "project_description": "Curates differences in ontology resources during pull requests in KGCL format.",
       "min_python_version": "3.9",
       "file_name": "main",
