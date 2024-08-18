@@ -1,0 +1,29 @@
+ontodiff\_curator package
+=========================
+
+Submodules
+----------
+
+ontodiff\_curator.cli module
+----------------------------
+
+.. automodule:: ontodiff_curator.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+ontodiff\_curator.main module
+-----------------------------
+
+.. automodule:: ontodiff_curator.main
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: ontodiff_curator
+   :members:
+   :undoc-members:
+   :show-inheritance:
