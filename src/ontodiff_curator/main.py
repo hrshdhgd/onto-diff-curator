@@ -171,7 +171,7 @@ def scrape_repo(repo: str, token: str, output_file: Union[Path, str]) -> None:
                 # Get changed files in the PR
                 files = pr.get_files()
                 for file in files:
-                    if file.filename.endswith(file_of_interest):
+                    if file.filename.endswith(f"/{file_of_interest}"):
                         # Get the commit SHA of the main branch just before the PR was merged
                         base_commit_sha = pr.base.sha
                         head_commit_sha = pr.head.sha

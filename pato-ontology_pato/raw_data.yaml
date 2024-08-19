@@ -1,3 +1,33 @@
+pull_request_571:
+  body: 'Fixes #263'
+  changed_files:
+  - filename: src/ontology/pato-edit.obo
+    url_in_pr: https://github.com/pato-ontology/pato/raw/be47354fc340d082d46e85b54720d958b227a035/src/ontology/pato-edit.obo
+    url_on_main: https://github.com/pato-ontology/pato/raw/518536fde399913268bc945493bed936d4fc0f7e/src/ontology/pato-edit.obo
+  comments: []
+  issue_closed:
+  - body: "As I understand it, bare URLs are discouraged in xrefs.  We should instead\
+      \ use a stand Curie.  In the case of orcids => \r\n\r\nhttps://orcid.org/0000-0003-4148-4606\
+      \ \r\n\r\n-> \r\n\r\norcid:0000-0003-4148-4606\r\n\r\n(although expansion should\
+      \ probably be registered here: https://github.com/geneontology/go-site/edit/master/metadata/db-xrefs.yaml\
+      \ as this seems to have become the standard reference for xrefs.)"
+    comments:
+    - ">  bare URLs are discouraged in xrefs\r\n\r\nI would be interested to see why;\
+      \ all the other phenotype ontologies now use the full IRIs here.. :/ This should\
+      \ be discussed on OBO foundry level I think."
+    - "Maybe we could make an exception for ORCIDs, but xrefs in OBO are meant to\
+      \ be DB:acc.  Where DB can be expanded to a base URL that makes them CURIES.\
+      \ \r\n\r\nI've spent a long time stripping out full URLs from xrefs in other\
+      \ projects (VFB, GO).  They are a pain in the ass for linking gracefully in\
+      \ display."
+    - +1 for making an exception for ORCIDs, to use the full URL.
+    - '@anitacaron can you close this if it is done?'
+    labels: []
+    number: 263
+    title: Standardise orcids in DBxrefs
+  labels: []
+  number: 571
+  title: Expand ORCIDs in dbxref as an agreed exception
 pull_request_562:
   body: "Fixes #561\r\n\r\n@rays22  - I'd like to get this out ASAP as needed for\
     \ multiple HCA projects. Could you give it a quick review. Thanks!"
@@ -278,35 +308,6 @@ pull_request_486:
   labels: []
   number: 486
   title: add new terms male with DSD and female with DSD
-pull_request_479:
-  body: "Notes:\r\n- release to fix #478\r\n- related to https://github.com/mgijax/mammalian-phenotype-ontology/issues/3521\r\
-    \n- Imports and mirrors refreshed\r\n- New term: Rusty"
-  changed_files:
-  - filename: src/ontology/reports/pato-edit.obo-obo-report.tsv
-    url_in_pr: https://github.com/pato-ontology/pato/raw/33c3f7d90100dbcad51f6472c38375fceea364f3/src/ontology/reports/pato-edit.obo-obo-report.tsv
-    url_on_main: https://github.com/pato-ontology/pato/raw/5ef33bb65405502009f18921ffbe46eb7005e641/src/ontology/reports/pato-edit.obo-obo-report.tsv
-  comments: []
-  issue_closed:
-  - body: "Some definition on synovial cell causes problems for MP, which is not yet\
-      \ on base \r\n\r\n- [x] https://github.com/mgijax/mammalian-phenotype-ontology/issues/3521\r\
-      \n\r\n@shawntanzk if you could do a release soonish that would be great, if\
-      \ not, I can do it too."
-    comments:
-    - happy to run one, stuck inside today anyway cause of rain :( I'm guessing it
-      needs IMP to be refreshed too?
-    - Yeah probably the entire thing IMP MIR both true! Thank you! :)
-    - 'it seems that running `prepare_release` didnt update merged imports - am now
-      making it separately instead, but thought it might be something to look into '
-    - '`prepare_release` did not update merged imports?  in any case, this pointed
-      me to a missing link in the dependencies, so good observe, thanks @shawntanzk '
-    - "> prepare_release did not update merged imports? \r\n\r\nYups, had to run it\
-      \ separately. "
-    labels: []
-    number: 478
-    title: New release
-  labels: []
-  number: 479
-  title: 2022-02-20 release
 pull_request_476:
   body: "Fixes #475\r\nTagging @BarryFen"
   changed_files:
@@ -652,9 +653,6 @@ pull_request_455:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/8513a032c5495ca26e0d098dc0c71322d7648231/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/dc63eeff16793d607f133b992803b81ba07f3662/src/ontology/pato-edit.obo
-  - filename: src/ontology/reports/pato-edit.obo-obo-report.tsv
-    url_in_pr: https://github.com/pato-ontology/pato/raw/8513a032c5495ca26e0d098dc0c71322d7648231/src/ontology/reports/pato-edit.obo-obo-report.tsv
-    url_on_main: https://github.com/pato-ontology/pato/raw/dc63eeff16793d607f133b992803b81ba07f3662/src/ontology/reports/pato-edit.obo-obo-report.tsv
   comments:
   - Shouldnt this be obsoleted properly?
   - Did not obsolete, but instead replaced it by adding a RO ID on it - happy to properly
@@ -2479,18 +2477,9 @@ pull_request_282:
 pull_request_270:
   body: 'See #269  DO NOT MERGE. MORE WORK NEEDED!'
   changed_files:
-  - filename: reports/pato-edit.obo-obo-report.tsv
-    url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/reports/pato-edit.obo-obo-report.tsv
-    url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/reports/pato-edit.obo-obo-report.tsv
-  - filename: src/ontology/merged-pato-edit.obo
-    url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/merged-pato-edit.obo
-    url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/merged-pato-edit.obo
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  - filename: src/ontology/reports/pato-edit.obo-obo-report.tsv
-    url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/reports/pato-edit.obo-obo-report.tsv
-    url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/reports/pato-edit.obo-obo-report.tsv
   comments: []
   issue_closed:
   - body: "pato-edit.obo currently has no import statments. It should have import\
