@@ -3,6 +3,7 @@
 import datetime
 import io
 import logging
+import shlex
 import shutil
 import subprocess
 import time
@@ -54,22 +55,22 @@ def check_rate_limit(g):
 def remove_import_lines(owl_file: str):
     """
     Remove import lines from an OWL file.
-    
+
     # ! This is a band-aid fix for OWL files for now. This function will be removed in the future.
 
     :param owl_file: Path to the OWL file.
     """
     try:
         # Read the content of the OWL file
-        with open(owl_file, 'r') as file:
+        with open(owl_file, "r") as file:
             lines = file.readlines()
 
         # Write back the lines excluding the specified import lines
-        with open(owl_file, 'w') as file:
+        with open(owl_file, "w") as file:
             for line in lines:
                 if not line.startswith("Import"):
                     file.write(line)
-        
+
         logging.info(f"Successfully removed specified import lines from {owl_file}")
 
     except Exception as e:
@@ -85,22 +86,26 @@ def owl2obo(owl_file: str):
     remove_import_lines(owl_file)
     obo_file = str(owl_file).replace(".owl", ".obo")
     catalog_file = PROJECT_DIR / "catalog-v001.xml"
-    command = f'robot remove --catalog {catalog_file} -i {owl_file} --select "imports" --trim false convert --check false -o {obo_file}'
-    command_list = command.split()
+    command = (
+        f"robot remove --catalog {catalog_file} -i {owl_file} "
+        '--select "imports" --trim false convert --check false '
+        f"-o {obo_file}"
+    )
 
     try:
+        command_list = shlex.split(command)
         result = subprocess.run(command_list, capture_output=True, text=True)
         # Check if the command was successful
         if result.returncode == 0:
             logging.info(f"ROBOT command succeeded: {result.stdout}")
         else:
             if "INVALID ONTOLOGY FILE ERROR" in result.stdout:
-                return  0# Skip this file and move to the next iteration
+                return 0  # Skip this file and move to the next iteration
             else:
                 raise RuntimeError(f"ROBOT command failed: {result.stdout}")
 
     except Exception as e:
-        raise(f"Error converting OWL to OBO: {e}")
+        raise RuntimeError(f"Error converting OWL to OBO: {e}") from e
 
 
 def scrape_repo(repo: str, token: str, output_file: Union[Path, str]) -> None:
@@ -234,9 +239,8 @@ def analyze_repo(repo: str, output_file: str):
     metadata = {
         "date_executed": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "code_version": "0.0.1",  # Replace with actual version if available
-        "github_url": f"https://github.com/{repo}"
+        "github_url": f"https://github.com/{repo}",
     }
-        
 
     # Analyze data
     with open(output_file, "w") as of:
@@ -259,7 +263,7 @@ def analyze_repo(repo: str, output_file: str):
             with open(old_file_path, "wb") as file:
                 file.write(response_main.content)
 
-            # 3. Run the diff command 
+            # 3. Run the diff command
             if extension == "owl":
                 n = owl2obo(new_file_path)
                 o = owl2obo(old_file_path)
@@ -305,6 +309,5 @@ def analyze_repo(repo: str, output_file: str):
             # delete new and old files
             shutil.rmtree(TMP_DIR)
             makedirs(TMP_DIR, exist_ok=True)
-            
 
     logging.info(f"Analysis completed for repo: {repo}")
