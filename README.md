@@ -28,13 +28,15 @@ poetry install
 ontodiff scrape --repository monarch-initiative/mondo --token $(GITHUB_ACCESS_TOKEN)
 ```
 
-This grabs the information of all pull requests in the MONDO repository that change the `mondo-edit.obo` file & have an associated issue(s) that they close. The output is stored as `data.yaml`
+This grabs the information of all pull requests in the MONDO repository that change the `mondo-edit.obo` file & have an associated issue(s) that they close. The output is stored as `raw_data.yaml`. 
+An upper and lower limit for the pull request number can also be provided here using parameters `--max-pr` and `--min-pr`.
+
 
 ```shell
 ontodiff analyze --repository monarch-initiative/mondo
 ```
 
-This grabs the resource (mondo-edit.obo) in the branch associated with the pull request and the `main` branch at the time and compares the two using `oaklib` and generates the difference between them in KGCL format. The output si another YAML file (`rag_input.yaml`) 
+This grabs the resource (mondo-edit.obo) in the branch associated with the pull request and the `main` branch at the time and compares the two using `oaklib` and generates the difference between them in KGCL format. The output si another YAML file (`data_with_changes.yaml`) 
 
 
 

@@ -27,6 +27,8 @@ token_option = click.option(
     help="Github token for the repository.",
 )
 output_option = click.option("-o", "--output-file", help="Path to the output YAML file.")
+max_pr_option = click.option("--max-pr", type=int, default=None, help="Latest PR to scrape.")
+min_pr_option = click.option("--min-pr", type=int, default=None, help="Earliest PR to scrape.")
 
 
 @click.group()
@@ -54,9 +56,11 @@ def main(verbose: int, quiet: bool):
 @repo_option
 @token_option
 @output_option
-def scrape(repo: str, token: str, output_file: Union[Path, str]):
+@max_pr_option
+@min_pr_option
+def scrape(repo: str, token: str, output_file: Union[Path, str], max_pr: int, min_pr: int):
     """Run the ontodiff-curator's scrape command."""
-    scrape_repo(repo, token, output_file)
+    scrape_repo(repo, token, output_file, max_pr, min_pr)
 
 
 @main.command()

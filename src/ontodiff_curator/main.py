@@ -108,7 +108,7 @@ def owl2obo(owl_file: str):
         raise RuntimeError(f"Error converting OWL to OBO: {e}") from e
 
 
-def scrape_repo(repo: str, token: str, output_file: Union[Path, str]) -> None:
+def scrape_repo(repo: str, token: str, output_file: Union[Path, str], max_pr_number = None, min_pr_number = None) -> None:
     """
     Get pull requests and corresponding issues they close along with the ontology resource files.
 
@@ -134,6 +134,12 @@ def scrape_repo(repo: str, token: str, output_file: Union[Path, str]) -> None:
 
     # Get closed pull requests
     pull_requests = repository.get_pulls(state="closed")
+
+    # Filter pull requests based on the PR number
+    if max_pr_number:
+        pull_requests = [pr for pr in pull_requests if pr.number <= max_pr_number]
+    if min_pr_number:
+        pull_requests = [pr for pr in pull_requests if pr.number >= min_pr_number]
 
     for pr in pull_requests:
         try:
