@@ -51,10 +51,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#module-ontodiff_curator.cli">ontodiff_curator.cli module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-ontodiff_curator.main">ontodiff_curator.main module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ontodiff_curator.main.analyze_repo"><code class="docutils literal notranslate"><span class="pre">analyze_repo()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ontodiff_curator.main.check_rate_limit"><code class="docutils literal notranslate"><span class="pre">check_rate_limit()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ontodiff_curator.main.owl2obo"><code class="docutils literal notranslate"><span class="pre">owl2obo()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ontodiff_curator.main.remove_import_lines"><code class="docutils literal notranslate"><span class="pre">remove_import_lines()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ontodiff_curator.main.scrape_repo"><code class="docutils literal notranslate"><span class="pre">scrape_repo()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ontodiff_curator.utils">ontodiff_curator.utils module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ontodiff_curator.utils.check_rate_limit"><code class="docutils literal notranslate"><span class="pre">check_rate_limit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ontodiff_curator.utils.download_file"><code class="docutils literal notranslate"><span class="pre">download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ontodiff_curator.utils.owl2obo"><code class="docutils literal notranslate"><span class="pre">owl2obo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ontodiff_curator.utils.remove_import_lines"><code class="docutils literal notranslate"><span class="pre">remove_import_lines()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-ontodiff_curator">Module contents</a></li>
@@ -103,7 +107,7 @@
 <p>Main module for the OntoDiffCurator package.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="ontodiff_curator.main.analyze_repo">
-<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.main.</span></span><span class="sig-name descname"><span class="pre">analyze_repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.main.analyze_repo" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.main.</span></span><span class="sig-name descname"><span class="pre">analyze_repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.main.analyze_repo" title="Link to this definition"></a></dt>
 <dd><p>Structure the pull request data and analyze the changes in the ontology files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -112,49 +116,15 @@
 <li><p><strong>output_file</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Path to the output YAML file.</p></li>
 </ul>
 </dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ontodiff_curator.main.check_rate_limit">
-<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.main.</span></span><span class="sig-name descname"><span class="pre">check_rate_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.main.check_rate_limit" title="Link to this definition"></a></dt>
-<dd><p>Check the current rate limit status of the GitHub API.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>g</strong> – GitHub instance.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Tuple containing remaining requests, reset timestamp, and current timestamp.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ontodiff_curator.main.owl2obo">
-<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.main.</span></span><span class="sig-name descname"><span class="pre">owl2obo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">owl_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.main.owl2obo" title="Link to this definition"></a></dt>
-<dd><p>Convert OWL file to OBO format.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>owl_file</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Path to the OWL file.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="ontodiff_curator.main.remove_import_lines">
-<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.main.</span></span><span class="sig-name descname"><span class="pre">remove_import_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">owl_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.main.remove_import_lines" title="Link to this definition"></a></dt>
-<dd><p>Remove import lines from an OWL file.</p>
-<p># ! This is a band-aid fix for OWL files for now. This function will be removed in the future.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>owl_file</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Path to the OWL file.</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ontodiff_curator.main.scrape_repo">
-<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.main.</span></span><span class="sig-name descname"><span class="pre">scrape_repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_pr_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_pr_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.main.scrape_repo" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.main.</span></span><span class="sig-name descname"><span class="pre">scrape_repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_pr_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_pr_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.main.scrape_repo" title="Link to this definition"></a></dt>
 <dd><p>Get pull requests and corresponding issues they close along with the ontology resource files.</p>
 <p>We collect the URLs of the resource files in the PR and also the main branch just before the PR was merged.</p>
 <dl class="field-list simple">
@@ -167,6 +137,52 @@
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-ontodiff_curator.utils">
+<span id="ontodiff-curator-utils-module"></span><h2>ontodiff_curator.utils module<a class="headerlink" href="#module-ontodiff_curator.utils" title="Link to this heading"></a></h2>
+<p>Utility functions for the OntoDiff Curator.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="ontodiff_curator.utils.check_rate_limit">
+<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.utils.</span></span><span class="sig-name descname"><span class="pre">check_rate_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.utils.check_rate_limit" title="Link to this definition"></a></dt>
+<dd><p>Check the current rate limit status of the GitHub API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>g</strong> – GitHub instance.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple containing remaining requests, reset timestamp, and current timestamp.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ontodiff_curator.utils.download_file">
+<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.utils.</span></span><span class="sig-name descname"><span class="pre">download_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.utils.download_file" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ontodiff_curator.utils.owl2obo">
+<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.utils.</span></span><span class="sig-name descname"><span class="pre">owl2obo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">owl_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.utils.owl2obo" title="Link to this definition"></a></dt>
+<dd><p>Convert OWL file to OBO format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>owl_file</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Path to the OWL file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ontodiff_curator.utils.remove_import_lines">
+<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.utils.</span></span><span class="sig-name descname"><span class="pre">remove_import_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">owl_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.utils.remove_import_lines" title="Link to this definition"></a></dt>
+<dd><p>Remove import lines from an OWL file.</p>
+<p># ! This is a band-aid fix for OWL files for now. This function will be removed in the future.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>owl_file</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Path to the OWL file.</p>
 </dd>
 </dl>
 </dd></dl>

@@ -20,6 +20,14 @@ ontodiff\_curator.main module
    :undoc-members:
    :show-inheritance:
 
+ontodiff\_curator.utils module
+------------------------------
+
+.. automodule:: ontodiff_curator.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
