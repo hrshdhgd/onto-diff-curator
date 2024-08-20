@@ -22,13 +22,15 @@ repo_option = click.option(
     help="Org/name of the github repo.",
 )
 token_option = click.option(
-    "-g",
+    "-t",
     "--token",
+    required=False,
     help="Github token for the repository.",
 )
 output_option = click.option("-o", "--output-file", help="Path to the output YAML file.")
 max_pr_option = click.option("--max-pr", type=int, default=None, help="Latest PR to scrape.")
 min_pr_option = click.option("--min-pr", type=int, default=None, help="Earliest PR to scrape.")
+overwrite_option = click.option('--overwrite/--no-overwrite', default=True, help="Enable or disable overwriting.")
 
 
 @click.group()
@@ -58,17 +60,20 @@ def main(verbose: int, quiet: bool):
 @output_option
 @max_pr_option
 @min_pr_option
-def scrape(repo: str, token: str, output_file: Union[Path, str], max_pr: int, min_pr: int):
+@overwrite_option
+def scrape(repo: str, token: str, output_file: Union[Path, str], max_pr: int, min_pr: int, overwrite: bool):
     """Run the ontodiff-curator's scrape command."""
-    scrape_repo(repo, token, output_file, max_pr, min_pr)
+    scrape_repo(repo, token, output_file, max_pr, min_pr, overwrite)
 
 
 @main.command()
 @repo_option
+@token_option
 @output_option
-def analyze(repo: str, output_file: Union[Path, str]):
+@overwrite_option
+def analyze(repo: str, token:str, output_file: Union[Path, str], overwrite: bool):
     """Run the ontodiff-curator's analyze command."""
-    analyze_repo(repo, output_file)
+    analyze_repo(repo, token, output_file, overwrite)
 
 
 if __name__ == "__main__":

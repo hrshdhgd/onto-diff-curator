@@ -3,20 +3,20 @@
 import datetime
 import io
 import logging
-import shlex
+import os
 import shutil
-import subprocess
 import time
 from os import makedirs
 from pathlib import Path
 from typing import Union
 
-import requests
 import requests_cache
 import yaml
 from github import Github, RateLimitExceededException
 from oaklib import get_adapter
 from oaklib.io.streaming_kgcl_writer import StreamingKGCLWriter
+
+from ontodiff_curator.utils import PROJECT_DIR, check_rate_limit, download_file, owl2obo
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -24,7 +24,6 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # Initialize requests_cache
 requests_cache.install_cache("github_cache")
 
-PROJECT_DIR = Path(__file__).parents[2]
 REPO_RESOURCE_MAP = {
     "monarch-initiative/mondo": "mondo-edit.obo",
     "pato-ontology/pato": "pato-edit.obo",
@@ -38,77 +37,7 @@ DATA_WITH_CHANGES_FILENAME = "data_with_changes.yaml"
 TMP_DIR_NAME = "tmp"
 
 
-def check_rate_limit(g):
-    """
-    Check the current rate limit status of the GitHub API.
-
-    :param g: GitHub instance.
-    :return: Tuple containing remaining requests, reset timestamp, and current timestamp.
-    """
-    rate_limit = g.get_rate_limit().core
-    remaining = rate_limit.remaining
-    reset_timestamp = rate_limit.reset.timestamp()
-    current_timestamp = time.time()
-    return remaining, reset_timestamp, current_timestamp
-
-
-def remove_import_lines(owl_file: str):
-    """
-    Remove import lines from an OWL file.
-
-    # ! This is a band-aid fix for OWL files for now. This function will be removed in the future.
-
-    :param owl_file: Path to the OWL file.
-    """
-    try:
-        # Read the content of the OWL file
-        with open(owl_file, "r") as file:
-            lines = file.readlines()
-
-        # Write back the lines excluding the specified import lines
-        with open(owl_file, "w") as file:
-            for line in lines:
-                if not line.startswith("Import"):
-                    file.write(line)
-
-        logging.info(f"Successfully removed specified import lines from {owl_file}")
-
-    except Exception as e:
-        logging.error(f"Error removing import lines from {owl_file}: {e}")
-
-
-def owl2obo(owl_file: str):
-    """
-    Convert OWL file to OBO format.
-
-    :param owl_file: Path to the OWL file.
-    """
-    remove_import_lines(owl_file)
-    obo_file = str(owl_file).replace(".owl", ".obo")
-    catalog_file = PROJECT_DIR / "catalog-v001.xml"
-    command = (
-        f"robot remove --catalog {catalog_file} -i {owl_file} "
-        '--select "imports" --trim false convert --check false '
-        f"-o {obo_file}"
-    )
-
-    try:
-        command_list = shlex.split(command)
-        result = subprocess.run(command_list, capture_output=True, text=True)
-        # Check if the command was successful
-        if result.returncode == 0:
-            logging.info(f"ROBOT command succeeded: {result.stdout}")
-        else:
-            if "INVALID ONTOLOGY FILE ERROR" in result.stdout:
-                return 0  # Skip this file and move to the next iteration
-            else:
-                raise RuntimeError(f"ROBOT command failed: {result.stdout}")
-
-    except Exception as e:
-        raise RuntimeError(f"Error converting OWL to OBO: {e}") from e
-
-
-def scrape_repo(repo: str, token: str, output_file: Union[Path, str], max_pr_number = None, min_pr_number = None) -> None:
+def scrape_repo(repo: str, token: str, output_file: Union[Path, str], max_pr_number = None, min_pr_number = None, overwrite:bool = True) -> None:
     """
     Get pull requests and corresponding issues they close along with the ontology resource files.
 
@@ -119,14 +48,17 @@ def scrape_repo(repo: str, token: str, output_file: Union[Path, str], max_pr_num
     :param output_file: Path to the output YAML file.
     """
     logging.info(f"Starting scrape for repo: {repo}")
-    g = Github(token)
+    if token:
+        g = Github(token)
+    else:
+        g = None
     file_of_interest = REPO_RESOURCE_MAP.get(repo)
     repository = g.get_repo(repo)
 
     # Set default output file path if not provided
     if not output_file:
         output_file = Path.cwd() / f"{repo.replace('/', '_')}/{RAW_DATA_FILENAME}"
-        if output_file.exists():
+        if output_file.exists() and overwrite:
             output_file.unlink()
 
     # Create directories if they do not exist
@@ -205,14 +137,15 @@ def scrape_repo(repo: str, token: str, output_file: Union[Path, str], max_pr_num
             else:
                 logging.warning(f"No issues linked to PR #{pr.number}")
 
-            # Check rate limit and sleep if necessary
-            remaining, reset_timestamp, current_timestamp = check_rate_limit(g)
-            if remaining < 10:
-                sleep_time = max(0, reset_timestamp - current_timestamp + 10)  # Add buffer time
-                logging.info(f"Rate limit low. Sleeping for {sleep_time} seconds.")
-                time.sleep(sleep_time)
-            else:
-                time.sleep(0.72)  # Sleep to avoid hitting rate limit
+            if g:
+                # Check rate limit and sleep if necessary
+                remaining, reset_timestamp, current_timestamp = check_rate_limit(g)
+                if remaining < 10:
+                    sleep_time = max(0, reset_timestamp - current_timestamp + 10)  # Add buffer time
+                    logging.info(f"Rate limit low. Sleeping for {sleep_time} seconds.")
+                    time.sleep(sleep_time)
+                else:
+                    time.sleep(0.72)  # Sleep to avoid hitting rate limit
 
         except RateLimitExceededException:
             logging.error("Rate limit exceeded. Sleeping for 60 seconds.")
@@ -224,13 +157,17 @@ def scrape_repo(repo: str, token: str, output_file: Union[Path, str], max_pr_num
     logging.info(f"Scrape completed for repo: {repo}")
 
 
-def analyze_repo(repo: str, output_file: str):
+def analyze_repo(repo: str, token:str, output_file: str, overwrite: bool = True) -> None:
     """
     Structure the pull request data and analyze the changes in the ontology files.
 
     :param repo: Org/name of the GitHub repo.
     :param output_file: Path to the output YAML file.
     """
+    if token:
+        g = Github(token)
+    else:
+        g = None
     DATA_PATH = PROJECT_DIR / f"{repo.replace('/', '_')}/{RAW_DATA_FILENAME}"
     TMP_DIR = PROJECT_DIR / f"{repo.replace('/', '_')}" / TMP_DIR_NAME
     makedirs(TMP_DIR, exist_ok=True)
@@ -247,10 +184,16 @@ def analyze_repo(repo: str, output_file: str):
         "code_version": "0.0.1",  # Replace with actual version if available
         "github_url": f"https://github.com/{repo}",
     }
+    if output_file.exists() and overwrite:
+        Path(output_file).unlink()
+        mode = "w"
+    else:
+        mode = "a"
 
     # Analyze data
-    with open(output_file, "w") as of:
-        yaml.dump(metadata, of)
+    with open(output_file, mode) as of:
+        if overwrite:
+            yaml.dump(metadata, of)
         for pr_number, content in data.items():
             url_in_pr = content["changed_files"][0]["url_in_pr"]
             url_on_main = content["changed_files"][0]["url_on_main"]
@@ -260,14 +203,10 @@ def analyze_repo(repo: str, output_file: str):
 
             # Download the files
             # 1. Download the file from the PR and name it new.obo/new.owl
-            response_pr = requests.get(url_in_pr, timeout=10)
-            with open(new_file_path, "wb") as file:
-                file.write(response_pr.content)
+            download_file(url_in_pr, new_file_path, g)
 
             # 2. Download the file from the main branch and name it old.obo/old.owl
-            response_main = requests.get(url_on_main, timeout=10)
-            with open(old_file_path, "wb") as file:
-                file.write(response_main.content)
+            download_file(url_on_main, old_file_path, g)
 
             # 3. Run the diff command
             if extension == "owl":
@@ -280,9 +219,9 @@ def analyze_repo(repo: str, output_file: str):
             try:
                 adapter_new = get_adapter(f"simpleobo:{new_file_path}")
                 adapter_old = get_adapter(f"simpleobo:{old_file_path}")
-            # except ValueError as e:
-            #     logging.error(f"ValueError: {e}")
-            #     continue  # Skip this file and move to the next iteration
+            except (ValueError, FileNotFoundError) as e:
+                logging.error(f"ValueError: {e}")
+                continue  # Skip this file and move to the next iteration
             except Exception as e:
                 raise e
                 # logging.error(f"Error: {e}")
