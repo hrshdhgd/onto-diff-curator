@@ -1,3 +1,4 @@
+pull_requests:
 - id: pr1529
   pr_body: "Fixes #1524 \r\n\r\n- CARO and CL dangling references are removed as they\
     \ are not needed.\r\n- All imports are refreshed\r\n- Imports where fixed in time,\
@@ -6,7 +7,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -44,7 +45,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -82,7 +83,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -120,7 +121,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -158,7 +159,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -196,7 +197,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -234,7 +235,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -272,7 +273,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -310,7 +311,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -348,7 +349,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -386,7 +387,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -424,7 +425,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -462,7 +463,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -500,7 +501,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -538,7 +539,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -576,7 +577,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -614,7 +615,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -652,7 +653,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -690,7 +691,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -728,7 +729,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -766,7 +767,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -804,7 +805,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0f236f3ab8ed86c0b085fc87f3b7183c51c6807d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/47e7510fd24ec9827dcd9b518d93eca8b4b31a7a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I just downloaded the main ontology -- envo.owl -- here: https://obofoundry.org/ontology/envo.html\
       \ and when I open it in Protege the top level classes don't seem to have rdfs:label\
       \ value so all I see are the codes for the IRIs. I have rendering set to use\
@@ -845,7 +846,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/c046edc2209d318a7a0edcece5d3de196560fc68/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/ae21b3b7a6dc1e1a44818632fa9fa644708cdfdb/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "@turbomam and I are looking at some oddities in OLS\r\n\r\nhttps://github.com/EBISPOT/ols4/issues/619\r\
       \n\r\nThis is what hail looks like in Protege:\r\n\r\n```owl\r\n'hail' SubClassOf\r\
       \n'object aggregate'\r\n and ('has member' some 'hail stone')\r\n```\r\n\r\n\
@@ -869,7 +870,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/1914f4c43c6a853bf862e42cac057bfc559eb78c/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/110c73c98184e4216acb2a7602f03953e4c15ebd/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Periphyton is defined by [NEON](https://www.neonscience.org/) as\
       \ 'Mixture of algae, cyanobacteria, microbes, and detritus that coats submerged\
       \ surfaces in most bodies of water.'\r\n\r\nsee a precedent for 'periphytic\
@@ -917,7 +918,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/b711bfe4abaaa6e6b8c4df1214275d380e272b17/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/2173e96b7992c6c711892711bd1c7b5e32b5f72c/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "see also\r\n- #1453 "
     issue_comments: []
     issue_labels: []
@@ -938,7 +939,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/8868687da7929a22688725e64636e57504ae54d3/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/981c7e3b3e95ebdb62029507aab6c9916e17fc10/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: '## Hey ontobot! apply:
 
 
@@ -975,7 +976,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/21506f53f2218429c01777de40e15af3e595e228/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/1a68c1987265057f6ca5d8dbf3cb4942cbb50c30/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Hey ontobot!, apply:\r\n-  remove synonym \"continental glacier\"\
       \ for ENVO:00000132\r\n-  remove synonym \"glacial tongue\" for ENVO:00000132\r\
       \n-  remove synonym \"Arctic pack\" for ENVO:00000132\r\n-  remove synonym \"\
@@ -1008,7 +1009,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/806a75d66388c6e5b3aee63687cff68b79ab0ed9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/d7ab47f1071801e1bf81a1229591e0bd59932963/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "[Astronomical Body Part](http://purl.obolibrary.org/obo/ENVO_01000813),\
       \ which is currently the superclass for many 'natural' spatial feature types,\
       \ is defined as a subclass of [Fiat object part](http://purl.obolibrary.org/obo/BFO_0000024)\
@@ -1099,7 +1100,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/806530c30f708c62e6516c4419da8f2e7f02b273/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/4f5e632f5bafc49b3eb3ff5f73725fd142b16b56/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "there are a lot of mappings in ENVO to CMECS, NLCD, etc that are\
       \ encoded using `oio:hasAlternativeId` - this is wrong, this should only be\
       \ used for merges.\r\n\r\nWhile we should move towards complete SSSOM metadata\
@@ -1131,7 +1132,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/05c965c5d31e0981f5721e4176e8aa953760987a/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/972c44087564d381ec1be645878b363f324bbb97/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "the logical definition doesn't match the text definition (formed\
       \ from is different from composed of), and ice is a solid\r\n\r\nterm|text def|logical\
       \ def\r\n---|---|---\r\nice | Ice which is formed from water. | ice and ('composed\
@@ -1151,7 +1152,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/50fcccf50c0c76cdb9d48e83a92b22d3ca580489/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/21eb2a1e4a02ef1bed9d150584db759091592fc7/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: I suggest "An ice mass comprised primarily of sea ice".
     issue_comments:
     - '@rduerr [PR](https://github.com/EnvironmentOntology/envo/pull/1395) submitted.'
@@ -1181,7 +1182,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/2fa17821b013fa2302f396c453450db561cfaaaf/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/1281944c3c0baec03cb9bc3ce27ed9d69846df30/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: SSIA
     issue_comments:
     - "@rduerr I submitted a [PR](https://github.com/EnvironmentOntology/envo/pull/1394)\
@@ -1203,7 +1204,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/392f2ae3ec740e823eec1af4ef8f9b781fa7d16b/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/686cafa625ce25e4e20d5379cfc348d1f99595af/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "- [x] close #1030 \r\n- [x] close #1075 \r\n- [x] close #1191\r\n\
       - [x] close #1193 \r\n- [x] close #1200 \r\n- [x] close #1089\r\n\r\n---\r\n\
       \r\n- [x] check [Combined NMDC ENVO_template_robot_sheet](https://docs.google.com/spreadsheets/d/1OQOtSlSjuw4OKre9YNE25-x9XnSNYaSPvbx_UjNZoBA/edit#gid=170789656)\r\
@@ -1277,7 +1278,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/2efcb0394e745c4966c8a77ad8a82cb3241c578d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/671cb773bc67870b28a1fe3bc3e4066bdcc74c3c/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "There are two object properties in ENVO with non-resolving hash IRIs:\r\
       \n- `http://purl.obolibrary.org/obo/envo#has_condition`\r\n- `http://purl.obolibrary.org/obo/envo#has_increased_levels_of`\r\
       \n\r\n`has_condition` is not used in any axioms; I would immediately obsolete\
@@ -1301,7 +1302,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/2efcb0394e745c4966c8a77ad8a82cb3241c578d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/671cb773bc67870b28a1fe3bc3e4066bdcc74c3c/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "There are two object properties in ENVO with non-resolving hash IRIs:\r\
       \n- `http://purl.obolibrary.org/obo/envo#has_condition`\r\n- `http://purl.obolibrary.org/obo/envo#has_increased_levels_of`\r\
       \n\r\n`has_condition` is not used in any axioms; I would immediately obsolete\
@@ -1321,7 +1322,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/8c81d213bec242e9719258691bf9839d1f31fe18/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/b68763c4ef344e195c0778eb58b45d7eb380595d/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: Please create subset ANZSoil so I can tag definitions from the Australia-New
       Zealand community
     issue_comments:
@@ -1343,7 +1344,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/d987f11d4ead2943bcece7841b39bf4d7794e320/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/8364aa3b1ddb8925e9a97ce1166362263126ba36/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: '@cmungall '
     issue_comments:
     - '@cmungall a number of terms attributed to cjm have no definition (e.g. http://purl.obolibrary.org/obo/ENVO_02000121)'
@@ -1373,7 +1374,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/88694960d2cfec2c572831d9c5b5630c42c7c210/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/0e8765a59883b75573f0cfa64de18a81a2965dfa/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: We should say as an axiom that Grain of Sand is "part of some sand"  And
       for Sand (http://purl.obolibrary.org/obo/ENVO_01000017) we should say has some
       part grain of sand.
@@ -1498,7 +1499,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/88694960d2cfec2c572831d9c5b5630c42c7c210/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/0e8765a59883b75573f0cfa64de18a81a2965dfa/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: We should say as an axiom that Grain of Sand is "part of some sand"  And
       for Sand (http://purl.obolibrary.org/obo/ENVO_01000017) we should say has some
       part grain of sand.
@@ -1623,7 +1624,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/4bf796e2ffb2b342faa1c2fc19cc910b5ed6bfb4/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/d977cb2868dc95edf45efb1d0b6ddf0ae04d4dbf/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Please add a class `runoff`\r\nexact_synonym : `surface runoff` `overland\
       \ flow` \r\ndefinition `Flow of water across the soil surface occuring when\
       \ irrigation, rain or snow melt adds water to a surface faster than it can enter\
@@ -1649,7 +1650,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1670,7 +1671,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1691,7 +1692,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1712,7 +1713,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1733,7 +1734,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1754,7 +1755,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1775,7 +1776,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1796,7 +1797,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1817,7 +1818,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1838,7 +1839,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1859,7 +1860,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1880,7 +1881,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1901,7 +1902,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/fa5f68108ed55b8eef0d91d6fab192b364278e52/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/91dcd0dbe316cf314d2f98489669dc587c28974a/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Correct misspelling of 'conposed' -> 'composed\r\n\r\n![image](https://user-images.githubusercontent.com/106114773/183148096-d99410ae-58e3-408e-b398-9c3c5558b263.png)\r\
       \n"
     issue_comments:
@@ -1922,7 +1923,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/2fed659adabfe806ffd588919a66382fb07a2250/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/93fe949ac77e08ed67e138ec1a3af4d4bd47ecb9/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "(related to the MarDATA course)\r\nI've researched some terms related\
       \ to bubbles, bubble plumes & bubble emissions from bubble sources, which we've\
       \ noticed are not yet present in this ontology.\r\n\r\nIn this thread we will\
@@ -1977,7 +1978,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a54cb02078943b31061d34e8e4c2369762be4d5f/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/903e1eef6a29b9a4245f5505fd0c8c57a835b8ca/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'We''ve identified as part of our ESIP cryo hackathon `ice floe` should
       be under `ice mass` (material), and a SC axiom `composed primarily of some water
       ice` should be added to ice floe.  '
@@ -2003,7 +2004,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2033,7 +2034,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2063,7 +2064,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2093,7 +2094,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2123,7 +2124,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2153,7 +2154,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2183,7 +2184,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2213,7 +2214,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2243,7 +2244,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2273,7 +2274,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2303,7 +2304,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2333,7 +2334,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2363,7 +2364,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2393,7 +2394,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2423,7 +2424,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2453,7 +2454,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2483,7 +2484,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2513,7 +2514,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2543,7 +2544,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2573,7 +2574,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/f58d22eb180e1674752dbe5b53830f99e651e2d9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/78a022c1dad3ea41f6eba97e39bc5e0980ef9d75/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This [PR](https://github.com/EnvironmentOntology/envo/pull/1240)\
       \ found a number of [duplicate synonyms](https://github.com/EnvironmentOntology/envo/pull/1240#issuecomment-1018847733)\
       \ in envo:\r\n```\r\nERROR\tduplicate_label_synonym\tgarden\thas_exact_synonym\t\
@@ -2598,7 +2599,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/202d1e5ffe81deb5ab5aa10c8d8358a5da0fe006/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5b40c5dd92b68bcb8f00de20db2e5ad883139d9b/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Hello, ECTO was looking for a term on toxic waste, details below:\r\
       \n\r\nterm: toxic waste\r\nparent class: waste (ENVO:00002264)\r\ndefinition:\
       \ Waste which contains toxic components (e.g., heavy metals or radiation) which\
@@ -2622,7 +2623,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/1c9e9027b13f1d4e5143cbca9c18d4e09ac06904/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5b40c5dd92b68bcb8f00de20db2e5ad883139d9b/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "# <h4> topsoil\r\n- subclassOf `soil`?\r\n- definition `The upper,\
       \ outermost layer of soil`  https://en.wikipedia.org/wiki/Topsoil\r\n# <h4>\
       \ topsoil thickness\r\n- subclassOf `thickness` http://purl.obolibrary.org/obo/PATO_0000915\
@@ -2644,7 +2645,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/d3982478a6afac76a916c9d237d4c9c52e5ba171/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5b40c5dd92b68bcb8f00de20db2e5ad883139d9b/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "first try for definitions\n\n> `treated wastewater` is a wastewater\
       \ converted into an effluent that can be either returned to the water cycle\
       \ with minimal environmental issues or reused.  https://en.wikipedia.org/wiki/Wastewater_treatment\n\
@@ -2673,7 +2674,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/c229935ec3d22261c4ea63dd66c8ecc1aa7b4354/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/9af2c9ea968890176e847c1be67d5e5c2f6ce0ad/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "\"Land surface is concerned mainly with surface phenomena affecting\
       \ land use and soil development that have traditionally been noted at the point\
       \ of soil observation.\"\r\n(from https://www.publish.csiro.au/book/5230/ )\r\
@@ -2710,7 +2711,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/9c406b9da41defe1539b55e8c9e9bb63bf390678/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/9af2c9ea968890176e847c1be67d5e5c2f6ce0ad/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "\"the whole land surface that viewed as a mosaic of tiles of odd\
       \ shapes and sizes. \" \r\n(from https://www.publish.csiro.au/book/5230/ ) \r\
       \n\r\nAlso see http://anzsoil.org/def/au/asls/landform \r\n\r\nSpecialization\
@@ -2796,7 +2797,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/37b8f33d14a386e5ec45ab66c33d78943ada106e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/9af2c9ea968890176e847c1be67d5e5c2f6ce0ad/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Please add a class `photosynthetically active radiation irradiance`\r\
       \nexact_synonym `PAR` \r\ndefinition `Spectral range of solar radiation from\
       \ 400 to 700 nanometers that photosynthetic organisms are able to use in the\
@@ -2820,7 +2821,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/38650df68a1a9eb162d050478acfdb562ce5c027/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/6bc800d998165d0b96ef1018181d454a4d3a30ea/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Please add a class `soil bulk density`. \r\nExact syn: Bulk density,\
       \ BD, soil volumetric density\r\nsubclassOf  `volumetric density`; http://purl.obolibrary.org/obo/PATO_0001353\r\
       \nsubclassOf `inheres in some soil`\r\ndefinition `A volumetric density quality\
@@ -2879,7 +2880,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/23b865f9a7b07479016eae7290c802c2ef92306b/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/3f23eff51be1a37ee3ba97b20530ff71285cd1be/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This allows issues like #1181 \r\n\r\nBecause the import can be problematic\
       \ (modularity issues, RO needs various classes across OBO for D/Rs), I suggest\
       \ a step in `make test` which does a merge of ro full and envo and runs hermit,\
@@ -3069,7 +3070,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/23b865f9a7b07479016eae7290c802c2ef92306b/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/3f23eff51be1a37ee3ba97b20530ff71285cd1be/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This allows issues like #1181 \r\n\r\nBecause the import can be problematic\
       \ (modularity issues, RO needs various classes across OBO for D/Rs), I suggest\
       \ a step in `make test` which does a merge of ro full and envo and runs hermit,\
@@ -3259,7 +3260,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/23b865f9a7b07479016eae7290c802c2ef92306b/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/3f23eff51be1a37ee3ba97b20530ff71285cd1be/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This allows issues like #1181 \r\n\r\nBecause the import can be problematic\
       \ (modularity issues, RO needs various classes across OBO for D/Rs), I suggest\
       \ a step in `make test` which does a merge of ro full and envo and runs hermit,\
@@ -3445,7 +3446,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/059bd062ab2d40edc51d0c298e45526535941ff5/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/99cf80640d92bfce8858626c118686feaac56999/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "\r\n  - [freezing fog](http://purl.obolibrary.org/obo/ENVO_03000137)\
       \ SubClassOf [fog](http://purl.obolibrary.org/obo/ENVO_01000844)\r\n    - [fog](http://purl.obolibrary.org/obo/ENVO_01000844)\
       \ SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [condensation\
@@ -3745,7 +3746,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/6ea10750fa625ec4141d3a43171cd69e35b0b50a/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/76589c1a3ebfae591875d91b71dc369c41cf5792/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "@turbomam \r\n@cmungall \r\n@TBKReddy\r\n\r\nRequest for creation\
       \ of new EnvO terms for the list provided [here](https://docs.google.com/spreadsheets/d/12GICSjx2s3Ey0Crv9uMdkW8unt3LxPcOS2_u7EMAr38/edit#gid=154764881)\r\
       \n "
@@ -3866,7 +3867,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/82d2d6ba34dc400d911202be3b9dfc950a13ab84/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/529e242bea5ce4cf88fe78b8f241a6384b5d65c3/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "As announced in previous issues, we'll be adding axioms to plastic-related\
       \ terms (added by @meichen-liu and @iwilkie, reviewed by @pbuttigieg and @raissameyer)\
       \ in Phase 2 of this project, which begins with this issue.\r\n\r\nThe related\
@@ -3895,7 +3896,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/3302bda367b64b2c66f74abf6a307a5e1972fd03/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/2b6a8ce498e218313fa1ebe5197a6e3d9399d6c4/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "@cmungall @kaiiam @pbuttigieg @turbomam while l working on creating\
       \ subsets of terms for NMDC, I found a number of terms missing definitions.\r\
       \n\r\nIRI | Label\r\n--|--\r\nhttp://purl.obolibrary.org/obo/ENVO_00002259 |\
@@ -4140,7 +4141,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a268bbf937a648a6599b20e81bc90e5574faf3c7/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Reasoning in HermiT finds unsatisfiable classes:\r\n\r\n![image](https://user-images.githubusercontent.com/3186638/112572765-44f45580-8dc1-11eb-8e77-a5dab502a227.png)\r\
       \n\r\nHere is the explanation for the inferences.\r\n![image](https://user-images.githubusercontent.com/3186638/112573959-b46b4480-8dc3-11eb-981a-83ea0922cb02.png)\r\
       \n\r\ncc @cmungall @pbuttigieg @kaiiam "
@@ -4189,7 +4190,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0d91fc9b847f5d4ccacf047dfb0f8144ca3b83bf/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/51ffb46f2345373c9cdefd051cf992b0e0834f19/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear Editors,\r\n\r\nAs part of our work with UN Environment on SDG14\
       \ we would like to add the following term:\r\n\r\nterm: weathering of plastic\r\
       \ndefinition: Weathering during which plastics are worn or broken down.\r\n\
@@ -4220,7 +4221,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/84a73a7b1fa596ee7a81edf62dc52ea789e195b9/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/523422f433af1afa8ed4ad3eae2bf5b76d156d04/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear editors,\r\n\r\nAs part of our work for UN environment on SDG\
       \ 14 we would like to add the following terms:\r\n\r\n**Term: fouling**\r\n\
       Definition: A material accumulation process during which unwanted materials\
@@ -4277,7 +4278,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/2da30638cb1c69a05045f32848f4598b5b30ba8f/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/0c34dddb3e209ddbb11e0133376f8b44caf8ee25/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear Editors,\r\n\r\nAs part of our work on SDG14 with UN Environment\
       \ we would like to add the following term:\r\n\r\nTerm: plastic manufacturing\
       \ process\r\nDefinition: A manufacturing process which has plastic as its specified\
@@ -4321,7 +4322,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/67652fe29ef85d51151ec57cd4fa72c5037ae35b/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/7411e6397d0e8ddf25711318fc17deb476b1043f/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear Editors,\r\n\r\nBased on comments on #1115, we would like to\
       \ add the following term for our work on SDG14 with UN Environment:\r\n\r\n\
       Term: coastal anthropogenic litter\r\nDefinition: Anthropogenic litter which\
@@ -4349,7 +4350,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/950392446d3fb0b18317178067c07e52a9830853/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/d896c5aac0e733f973968d53bd1185ca3920d4a9/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear Editors,\r\n\r\nAs part of our work on SDG14 for UN Environment\
       \ we would like to add the following terms:\r\n\r\nTerm: biopolymer\r\nDefinition:\
       \ A polymer which is produced by living organisms.\r\n[Source](https://www.ebi.ac.uk/ols/ontologies/ncit/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FNCIT_C73478&viewMode=All&siblings=false)\r\
@@ -4383,7 +4384,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/87de12ccbd0a2243cf97fc31f0231052001905a6/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/cf494af203c3e1211a1e86cd8bfd7c427cc0f562/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear Editors,\r\n\r\nAs part of our work for UN Environment on SDG14\
       \ we would like to add the following terms:\r\n\r\nTerm: weathering\r\nDefinition:\
       \ A material transformation process which produces undesirable change on a substrate\
@@ -4547,7 +4548,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/24ce81245f62b7641c2e8c4683722169f036fa4e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/51ffb46f2345373c9cdefd051cf992b0e0834f19/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear Editors,\r\n\r\nAs part of our work for UN Environment on SDG14\
       \ we would like to add the 6 following terms related to fishing and fishing\
       \ gear:\r\n\r\nTerm: fishing\r\nDefinition: An anthropogenic environmental process\
@@ -4636,7 +4637,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/4b2cf4de84039bdaa69bfbf09924d5bcc29ba21e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/737c5718bf8538838f5a1e7af1d57ad6f1ab9a50/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "When trying to use envo in an ODK import (see [issue](https://github.com/INCATools/ontology-development-kit/issues/411)),\
       \ an error was thrown for using `http://www.goosocean.org/components/com_oe/oe.php?task=download&id=34507&version=1.0&lang=1&format=1`\
       \ as the value of an `in_subset` annotation (see screenshot).\r\n\r\nIs this\
@@ -4656,7 +4657,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/231bc15cb094c0047c0f6d05297cb7832c9b29ec/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/737c5718bf8538838f5a1e7af1d57ad6f1ab9a50/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear editors,\r\n\r\nAs part of our work on SDG14 and marine plastics\
       \ we would like to import 12 terms from different ontologies into ENVO. \r\n\
       \r\n| ontology | IRI | term |\r\n| ------ | ----- | ----- |\r\n| CHEBI | http://purl.obolibrary.org/obo/CHEBI_60034\
@@ -4693,7 +4694,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/231bc15cb094c0047c0f6d05297cb7832c9b29ec/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/737c5718bf8538838f5a1e7af1d57ad6f1ab9a50/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear editors,\r\n\r\nAs part of our work on SDG14 and marine plastics\
       \ we would like to import 12 terms from different ontologies into ENVO. \r\n\
       \r\n| ontology | IRI | term |\r\n| ------ | ----- | ----- |\r\n| CHEBI | http://purl.obolibrary.org/obo/CHEBI_60034\
@@ -4730,7 +4731,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/231bc15cb094c0047c0f6d05297cb7832c9b29ec/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/737c5718bf8538838f5a1e7af1d57ad6f1ab9a50/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear editors,\r\n\r\nAs part of our work on SDG14 and marine plastics\
       \ we would like to import 12 terms from different ontologies into ENVO. \r\n\
       \r\n| ontology | IRI | term |\r\n| ------ | ----- | ----- |\r\n| CHEBI | http://purl.obolibrary.org/obo/CHEBI_60034\
@@ -4767,7 +4768,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/231bc15cb094c0047c0f6d05297cb7832c9b29ec/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/737c5718bf8538838f5a1e7af1d57ad6f1ab9a50/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear editors,\r\n\r\nAs part of our work on SDG14 and marine plastics\
       \ we would like to import 12 terms from different ontologies into ENVO. \r\n\
       \r\n| ontology | IRI | term |\r\n| ------ | ----- | ----- |\r\n| CHEBI | http://purl.obolibrary.org/obo/CHEBI_60034\
@@ -4804,7 +4805,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/231bc15cb094c0047c0f6d05297cb7832c9b29ec/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/737c5718bf8538838f5a1e7af1d57ad6f1ab9a50/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear editors,\r\n\r\nAs part of our work on SDG14 and marine plastics\
       \ we would like to import 12 terms from different ontologies into ENVO. \r\n\
       \r\n| ontology | IRI | term |\r\n| ------ | ----- | ----- |\r\n| CHEBI | http://purl.obolibrary.org/obo/CHEBI_60034\
@@ -4841,7 +4842,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/231bc15cb094c0047c0f6d05297cb7832c9b29ec/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/737c5718bf8538838f5a1e7af1d57ad6f1ab9a50/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear editors,\r\n\r\nAs part of our work on SDG14 and marine plastics\
       \ we would like to import 12 terms from different ontologies into ENVO. \r\n\
       \r\n| ontology | IRI | term |\r\n| ------ | ----- | ----- |\r\n| CHEBI | http://purl.obolibrary.org/obo/CHEBI_60034\
@@ -4878,7 +4879,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/231bc15cb094c0047c0f6d05297cb7832c9b29ec/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/737c5718bf8538838f5a1e7af1d57ad6f1ab9a50/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Dear editors,\r\n\r\nAs part of our work on SDG14 and marine plastics\
       \ we would like to import 12 terms from different ontologies into ENVO. \r\n\
       \r\n| ontology | IRI | term |\r\n| ------ | ----- | ----- |\r\n| CHEBI | http://purl.obolibrary.org/obo/CHEBI_60034\
@@ -4917,7 +4918,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/623c2839217f38b3e2c38f207fc5298d826e4588/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/529e242bea5ce4cf88fe78b8f241a6384b5d65c3/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "A [Google sheet ENVO tab](https://docs.google.com/spreadsheets/d/1FkC7p0vLbdoYoUgPMUhlvpHo26RqrP9FuUoXyQdrHGM/edit#gid=90525156)\
       \  of NTR requests which has been edited and reviewed for a number of months\
       \ [edit] will soon exist as a Robot pull request. The terms are motivated by\
@@ -5044,7 +5045,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/623c2839217f38b3e2c38f207fc5298d826e4588/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/529e242bea5ce4cf88fe78b8f241a6384b5d65c3/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "A [Google sheet ENVO tab](https://docs.google.com/spreadsheets/d/1FkC7p0vLbdoYoUgPMUhlvpHo26RqrP9FuUoXyQdrHGM/edit#gid=90525156)\
       \  of NTR requests which has been edited and reviewed for a number of months\
       \ [edit] will soon exist as a Robot pull request. The terms are motivated by\
@@ -5171,7 +5172,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/623c2839217f38b3e2c38f207fc5298d826e4588/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/529e242bea5ce4cf88fe78b8f241a6384b5d65c3/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "A [Google sheet ENVO tab](https://docs.google.com/spreadsheets/d/1FkC7p0vLbdoYoUgPMUhlvpHo26RqrP9FuUoXyQdrHGM/edit#gid=90525156)\
       \  of NTR requests which has been edited and reviewed for a number of months\
       \ [edit] will soon exist as a Robot pull request. The terms are motivated by\
@@ -5298,7 +5299,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/623c2839217f38b3e2c38f207fc5298d826e4588/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/529e242bea5ce4cf88fe78b8f241a6384b5d65c3/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "A [Google sheet ENVO tab](https://docs.google.com/spreadsheets/d/1FkC7p0vLbdoYoUgPMUhlvpHo26RqrP9FuUoXyQdrHGM/edit#gid=90525156)\
       \  of NTR requests which has been edited and reviewed for a number of months\
       \ [edit] will soon exist as a Robot pull request. The terms are motivated by\
@@ -5424,7 +5425,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/2add3df93afebbeac3b2fed0bb81462aa436ccb2/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/441ffc867fa340d455723dc05c198fd74a2971ef/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Hello, \r\n@diatomsRcool and I are interested in developing some\
       \ mixture terms in ENVO to use for exposure modeling in ECTO that require further\
       \ imports from ChEBI, and one term from FoodOn. Those imports include these\
@@ -5791,7 +5792,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/2add3df93afebbeac3b2fed0bb81462aa436ccb2/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/441ffc867fa340d455723dc05c198fd74a2971ef/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Hello, \r\n@diatomsRcool and I are interested in developing some\
       \ mixture terms in ENVO to use for exposure modeling in ECTO that require further\
       \ imports from ChEBI, and one term from FoodOn. Those imports include these\
@@ -6162,7 +6163,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/65fbe8bb6620eaeeb37e162cb5aa9ed3de343fb3/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/2c6fd6133b66b666eef64bd83cf2797c52565422/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Continuing ice discussions from #900 #782  \r\n\r\nCurrent ice hierarchy:\r\
       \n\r\n![image](https://user-images.githubusercontent.com/50745/98488389-b9957180-21dd-11eb-95e7-e69c624649e7.png)\r\
       \n\r\n## remove water-body-derived ice\r\n\r\nThis has a single child, sea ice.\
@@ -6536,7 +6537,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/917783a4dea062ab1c8a4f2577578bd0afa9358a/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/dd0c8ea6f323f8ddbe3b83c2233fefe88609801e/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "An ESIP Semantic Harmonization Cluster Cryohackathon, where we continued\
       \ our tripartite harmonisation between @rduerr's Global Cryosphere Watch definitional\
       \ synthesis, ENVO, and SWEET. \r\n\r\nIn this session, we finished the phenCryo.ttl\
@@ -6558,7 +6559,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/307defe68e9c3f3579e62cb626789e62e3f6843d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/159e1b48530c04777b928ad7c3bf46ea139930f9/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "The class for [cumulus cloud](http://purl.obolibrary.org/obo/ENVO_01001414)\
       \ has an incomplete definition. \r\n\r\nI'll make a PR to fix this \u2601\uFE0F\
       \ "
@@ -6586,7 +6587,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/53cf386ef6bbd027780e844bf43db87a7ac96440/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/abb28050de5897640bee70733578657cc2e8b7c2/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "@rduerr suggests the following definition synthesised from her GCW\
       \ work:\r\n\r\n>Heavily rimed snow particles, often called snow pellets; often\
       \ indistinguishable from very small soft hail except for the size convention\
@@ -6633,7 +6634,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/cdb3a32b7bdd442300678755c540e190496501b7/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/fe45026611b2c15fee72da764db83e2d737d8182/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "\r\nProposed definition fro Gary Berg-Cross\r\n>debris flow \u2013\
       \ debris flows occur when masses of poorly sorted sediment, agitated and saturated\
       \ with water, surge down slopes in response to gravity.  \r\n\r\nfrom https://www.usgs.gov/natural-hazards/landslide-hazards/science/landslides-glossary?qt-science_center_objects=0#qt-science_center_objects\r\
@@ -6747,7 +6748,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/c70ac31aab64bbce8bd2d162ea3b2b17d8f13b15/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/cfa260824b3f8cc43cc9cb512bb7ba8514d6c1ea/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Add as a process. Add subclasses for different wavelengths.\n\nThis\
       \ may well belong in a physics ontology, but we can incubate for now\n\nENVO\
       \ would only store the process. Various other experimental condition ontologies\
@@ -6921,7 +6922,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/b18b42cb47a333d44afb20dfa74b3fc89864ff3a/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5ecb02c2fe57d320ab609a40088951bdf2b7a1c2/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "[compost soil](http://purl.obolibrary.org/obo/ENVO_00005747) currently\
       \ lacks a definition. \r\n\r\n@pbuttigieg  Would something as simple as:\r\n\
       \r\n`Soil which is derived from compost.` suffice?"
@@ -6950,7 +6951,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/931a8ed3c981e7df8aa48d6edc132908ec7b6d56/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/117b5dc1c19cb56d7babb797acf53d44ce41b3b0/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "According to the [wiki page](https://en.wikipedia.org/wiki/Potting_soil)\
       \ they have the following useful sentences:\r\n\r\n> Potting soil is a medium\
       \ in which to grow plants. Despite its name, little or no soil is used in potting\
@@ -7017,7 +7018,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7043,7 +7044,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7069,7 +7070,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7095,7 +7096,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7121,7 +7122,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7147,7 +7148,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7173,7 +7174,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7199,7 +7200,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7225,7 +7226,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7251,7 +7252,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7277,7 +7278,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7303,7 +7304,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7329,7 +7330,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7355,7 +7356,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7381,7 +7382,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7407,7 +7408,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a9c5188262b2260d32847caafd99c4ee2c1c6b7e/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/5638b5a507c8adb7fd025d9b4edf83acd06d7771/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Complete the representation of the [EOVs ](https://www.goosocean.org/index.php?option=com_content&view=article&id=170&Itemid=101)for
       IOC-UNESCO GOOS, linking to their specification sheets where applicable. '
     issue_comments:
@@ -7434,7 +7435,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/2c1af197a6f96278c32a17638e01556766f0ae75/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/8895624fe78c67c77cd2e215523f8389ea3c3db4/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I think any \"planned P\" where P is in scope for ENVO should follow\
       \ a DP template and always have a logical definition.\r\n\r\nCurrent 'planned\
       \ deforestation' is:\r\n\r\ndef _A planned process during which humans convert\
@@ -7525,7 +7526,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/2c1af197a6f96278c32a17638e01556766f0ae75/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/8895624fe78c67c77cd2e215523f8389ea3c3db4/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I think any \"planned P\" where P is in scope for ENVO should follow\
       \ a DP template and always have a logical definition.\r\n\r\nCurrent 'planned\
       \ deforestation' is:\r\n\r\ndef _A planned process during which humans convert\
@@ -7616,7 +7617,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/2c1af197a6f96278c32a17638e01556766f0ae75/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/8895624fe78c67c77cd2e215523f8389ea3c3db4/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I think any \"planned P\" where P is in scope for ENVO should follow\
       \ a DP template and always have a logical definition.\r\n\r\nCurrent 'planned\
       \ deforestation' is:\r\n\r\ndef _A planned process during which humans convert\
@@ -7706,7 +7707,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/aaf2174666adec1c7eb02994638b28c42ee83b00/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/586982675f26f5195fa10440a488c6a389585bf6/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I noticed that [solid environmental material](http://purl.obolibrary.org/obo/ENVO_01000814)\
       \ is a subclass of [ice](http://purl.obolibrary.org/obo/ENVO_01001125) on ontobee,\
       \ which is curious as its not in the owl file when viewed in protege. Upon consultation\
@@ -7832,7 +7833,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/ab8baa8fb0b1d55ebb6f0300a3ee793a78e55df5/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/00c8f6342b6f034dfa0ff93170ba5295b7c2f4fc/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Derived from #887 \n\nGeothermally active field may be a good superclass\
       \ here. Ties in to several other issues handling \"field\" semantics. "
     issue_comments:
@@ -7953,7 +7954,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/e6b16adc4fdfddb38bea8632214b35168fdc0eed/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/e1334611bfd69eaee39755caacb553cf0a23a3c9/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "http://obo-dashboard-test.ontodev.com/ - the ontology is failing\
       \ the 'open' check\r\n\r\nthe release owl should contain:\r\n\r\n```\r\n   \
       \  xmlns:terms=\"http://purl.org/dc/terms/\"\r\n...\r\n        <terms:license\
@@ -7975,7 +7976,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/b29476a75dac17aaec881b2c0f55d2707f33dfd7/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/e998d11497228dbc9061d2b1b33f9aa1b6358783/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "I am finding an example to demonstrate ENVO editing workflow to @ukaraoz\
       \ \r\n\r\nI note some issues with 'volcanic soil'\r\n\r\n - it has no text definition\r\
       \n - the logical definition is `soil and ('part of' some volcano)` which does\
@@ -8015,7 +8016,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/28e57c39256181203366bac3ca124bca7d1b21b0/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/640b059932fc8da1c144acb8916d00e23e17dd98/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Superclass: [season](http://purl.obolibrary.org/obo/ENVO_03000096)\r\
       \nOccurs in: west africa, asia-australia\r\n\r\nRef: https://en.wikipedia.org/wiki/Monsoon "
     issue_comments:
@@ -8102,7 +8103,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/10cac57151d3d39866d114a09f8d29bc981b8197/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/14a198cc69f5b67b486d201126ab60d3b68d6316/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Superclass: [water-based rainfall](http://purl.obolibrary.org/obo/ENVO_01000830)\r\
       \nInvolves: [acidic water](http://purl.obolibrary.org/obo/ENVO_01000358)"
     issue_comments:
@@ -8142,7 +8143,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/51ea3245caf584cd0250a596271bd65e5e3afbdf/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/167fc562449fcbd4f0e25889853d9812f15f77ad/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "As a follow-up on https://github.com/ESIPFed/sweet/issues/133 posted\
       \ by @JimBiardCics, \r\nwe'll be updating the semantics of \"fronts\" in this\
       \ issue. \r\n\r\nResults will be mapped back to the undefined: http://sweetontology.net/phenAtmoFront\r\
@@ -8173,7 +8174,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/51ea3245caf584cd0250a596271bd65e5e3afbdf/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/167fc562449fcbd4f0e25889853d9812f15f77ad/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "As a follow-up on https://github.com/ESIPFed/sweet/issues/133 posted\
       \ by @JimBiardCics, \r\nwe'll be updating the semantics of \"fronts\" in this\
       \ issue. \r\n\r\nResults will be mapped back to the undefined: http://sweetontology.net/phenAtmoFront\r\
@@ -8204,7 +8205,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/51ea3245caf584cd0250a596271bd65e5e3afbdf/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/167fc562449fcbd4f0e25889853d9812f15f77ad/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "As a follow-up on https://github.com/ESIPFed/sweet/issues/133 posted\
       \ by @JimBiardCics, \r\nwe'll be updating the semantics of \"fronts\" in this\
       \ issue. \r\n\r\nResults will be mapped back to the undefined: http://sweetontology.net/phenAtmoFront\r\
@@ -8235,7 +8236,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/51ea3245caf584cd0250a596271bd65e5e3afbdf/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/167fc562449fcbd4f0e25889853d9812f15f77ad/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "As a follow-up on https://github.com/ESIPFed/sweet/issues/133 posted\
       \ by @JimBiardCics, \r\nwe'll be updating the semantics of \"fronts\" in this\
       \ issue. \r\n\r\nResults will be mapped back to the undefined: http://sweetontology.net/phenAtmoFront\r\
@@ -8268,7 +8269,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/e8a9d39847a516f0d0c915dcc2ead5686726ca8a/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/d77c51f360e9be9d8cc8005cb275e48674d7f296/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "definition \"An area of a planet's surface which is primarily covered\
       \ by fruticose or foliose lichens and which is in contact with an atmospheric\
       \ column extending from the planetary boundary layer to the planet's exosphere\
@@ -8337,7 +8338,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/68c782e5171509ab33bbf860896b60218d0587b8/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/42e5afedf237051b3569d7457c80db41da67e9be/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Based on this definition:\r\nhttps://en.wikipedia.org/wiki/Submarine_groundwater_discharge\r\
       \n\r\nTo be used in an ongoing data submission by GFBio. Any chance to prioritize\
       \ this, please?"
@@ -8378,7 +8379,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/8cfe3f85c4e2ae13688f5eb98c34ad0a0139ae76/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/49e69f333c688de90c2dcb25d5a8a27696df53d0/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "A request from [Felix Janssen](https://orcid.org/0000-0002-5607-4012)\
       \ to add \"manganese nodule ecosystem\"\r\n\r\nBuilding on[ polymetallic nodule](\
       \ http://purl.obolibrary.org/obo/ENVO_01000112) semantics."
@@ -8400,7 +8401,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/b82e3dd22cd20cc0e016f41dbe0128a06739314f/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/7235599bb0ca11326eedcdc0693158b5b6baa156/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: Please create some dummy PURLs for the WWF ecoregions and export a
       table with the PURLs and the WWF ecoregion labels. There is moderate urgency.
       Thank you.
@@ -8489,7 +8490,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/cb21d2c00fa7fdc66c5795cbef6a92c274c711bc/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/902777cec56beaf8f3ba285f3800b172e11e9a27/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: Please create some dummy PURLs for the WWF ecoregions and export a
       table with the PURLs and the WWF ecoregion labels. There is moderate urgency.
       Thank you.
@@ -8580,7 +8581,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/a7797592c81e9efd8f7ec8d715a688f6ca05bd4d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/ece44815d689e8fcf476182cc8e9f129fd16d7ff/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: The existing definition does not include alpine tundras, so edited
       main definition and added two sub-classes for alpine and polar tundras.  Also
       unclear how to add the semantics of location (i.e., polar) but the quality environmental_condition
@@ -8628,7 +8629,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/868015d93158c62cb4b2571b7c1ef90e71a58e67/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/12e991cc9d395e1962021a6c629a433239c7e6a1/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Need this term for the ECSO project.\r\n\r\ndefinition:  The organic\
       \ matter component of soil, consisting of plant and animal residues at various\
       \ stages of decomposition, cells and tissues of soil organisms, and substances\
@@ -8649,7 +8650,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/8fcb6a1f286a9804548c979e663d59243d999a58/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/0fa79549c62dc79f9e5ed81f623b4d12c9f68e96/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Hi @pbuttigieg . There's 20 CHEBI terms that we would like to be\
       \ imported for use in ECSO.  I'll assign you to this issue for now, so I can\
       \ see what the process is like. Thanks.\r\n\r\n\r\nchemical_name | CHEBI_URI\r\
@@ -8711,7 +8712,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/0bd5d998631092381be10ef8821aa93836873f2d/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/7431e91c3e1ac85509e3a05649de746a6cb578b7/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: Currently ENVO uses it's own relation here, should use RO
     issue_comments:
     - If the semantics are the same, substitute away.  We need "partially_surrounded_by"
@@ -8739,7 +8740,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/c6bc0f938debb16905dbfb39b12faa18bd5b97a7/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/9c9c594a6a28fade20c7ad8f011a44c833aafc4e/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "There are terms for ocean floor, cave floor and various building\
       \ floors, but not one for forest floor. \r\nPerhaps multiple terms are required\
       \ for the different forest types? but for my purposes I would be content with\
@@ -8765,7 +8766,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/c604bd39da952e6b7e7f38d5fc69d2979a9a24ca/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/06b0ce0f048610d6b927b7b2380ffb7e0cb26a6d/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: Please create some dummy PURLs for the WWF ecoregions and export a
       table with the PURLs and the WWF ecoregion labels. There is moderate urgency.
       Thank you.
@@ -8855,7 +8856,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/20175e3863697bfe6b58d2de3998def38a2b06c4/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/885fd752f0b674fa11a1431da0ccbd5085991391/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: ''
     issue_comments:
     - 'What was this issue? Why was no error thrown previously? '
@@ -8871,7 +8872,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/6565e562b241474fc7061cc6b51bab509bb39807/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/09ff71818772fb2ec93b463d94a5d6af9fdf2838/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "We should be using owlapi 4.5.6 or higher. Robot 1.3.0 uses 4.5.6\
       \ and Protege 5.5 uses 4.5.7. Using earlier versions will introduce spurious\
       \ diffs\r\n\r\nNeed to do a one time roundtrip to convert to new ordering"
@@ -8888,7 +8889,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/65c179ba2d3e8e2eda3bbdb7963da9656ad5eead/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/c50c809ce4d08e65c58bf69d6adeba15117691ac/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "single is-a child is a bad smell:\r\n\r\n```\r\n       is_a ENVO:01000544\
       \ ! boundary layer\r\n           is_a ENVO:01000323 ! atmospheric boundary layer\r\
       \n```\r\n\r\nthe def here is a bit odd:\r\n\r\n```\r\nid: ENVO:01000544\r\n\
@@ -8928,7 +8929,7 @@
   - filename: src/envo/envo-edit.owl
     url_in_pr: https://github.com/EnvironmentOntology/envo/raw/3dbcd1e0e189162f2fe8be62021c8fa147ac6260/src/envo/envo-edit.owl
     url_on_main: https://github.com/EnvironmentOntology/envo/raw/b445dd57954a1d55741ee813181ff25bb12a146d/src/envo/envo-edit.owl
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "### from #476\r\n\r\nIn last pull request I added geographic basin\
       \ \r\nIn response to @pbuttigieg:\r\n> Please link with appropriate axioms to\
       \ planetary crust.\r\nI'm not sure if located in or part of is more appropriate\
