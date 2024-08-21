@@ -1,5 +1,6 @@
 """Main module for the OntoDiffCurator package."""
 
+from collections import defaultdict
 import datetime
 import io
 import logging
@@ -7,7 +8,7 @@ import shutil
 import time
 from os import makedirs
 from pathlib import Path
-from typing import Union
+from typing import List, Union
 
 import requests
 import requests_cache
@@ -16,6 +17,7 @@ from github import Github, RateLimitExceededException
 from oaklib import get_adapter
 from oaklib.io.streaming_kgcl_writer import StreamingKGCLWriter
 
+from ontodiff_curator.constants import CHANGED_FILES_KEY, FILENAME_KEY, ISSUE_BODY_KEY, ISSUE_COMMENTS_KEY, ISSUE_LABELS_KEY, ISSUE_NUMBER_KEY, ISSUE_TITLE_KEY, PR_BODY_KEY, PR_CHANGED_FILES_KEY, PR_COMMENTS_KEY, PR_ISSUE_CLOSED_KEY, PR_LABELS_KEY, PR_NUMBER_KEY, PR_TITLE_KEY, PULL_REQUESTS_KEY, URL_IN_PR_KEY, URL_IN_MAIN_KEY
 from ontodiff_curator.utils import PROJECT_DIR, check_rate_limit, download_file, owl2obo
 
 # Configure logging
@@ -38,7 +40,7 @@ TMP_DIR_NAME = "tmp"
 
 
 def scrape_repo(
-    repo: str, token: str, output_file: Union[Path, str], max_pr_number=None, min_pr_number=None, pr_status = "closed", overwrite: bool = True
+    repo: str, token: str, output_file: Union[Path, str], max_pr_number=None, min_pr_number=None, pr_status = "merged", overwrite: bool = True
 ) -> None:
     """
     Get pull requests and corresponding issues they close along with the ontology resource files.
@@ -50,18 +52,15 @@ def scrape_repo(
     :param output_file: Path to the output YAML file.
     """
     logging.info(f"Starting scrape for repo: {repo}")
-    if token:
-        g = Github(token)
-    else:
-        g = None
+    g = Github(token)
     file_of_interest = REPO_RESOURCE_MAP.get(repo)
     repository = g.get_repo(repo)
 
     # Set default output file path if not provided
     if not output_file:
         output_file = Path.cwd() / f"{repo.replace('/', '_')}/{RAW_DATA_FILENAME}"
-    if output_file.exists() and overwrite:
-        output_file.unlink()
+        if output_file.exists() and overwrite:
+            output_file.unlink()
 
     # Create directories if they do not exist
     output_file.parent.mkdir(parents=True, exist_ok=True)
@@ -75,35 +74,41 @@ def scrape_repo(
     if min_pr_number:
         pull_requests = [pr for pr in pull_requests if pr.number >= min_pr_number]
 
-    for pr in pull_requests:
+    for idx, pr in enumerate(pull_requests):
         merge_url = f"https://api.github.com/repos/{repo}/pulls/{pr.number}/merge"
-        headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github.v3+json"}
-        merge_response = requests.get(merge_url, timeout=10, headers=headers)
+        merge_response = requests.get(merge_url, timeout=10, headers={"Authorization": f"token {token}"})
         if merge_response.status_code == 204:
             try:
                 # Initialize data structure for the pull request
-                pr_data = {
-                    "pr_number": pr.number,
-                    "pr_title": pr.title,
-                    "pr_body": pr.body,
-                    "pr_labels": [label.name for label in pr.labels],
-                    "pr_comments": [comment.body for comment in pr.get_comments()],
-                    "changed_files": [],
-                }
+                pr_entry = {
+                        PR_NUMBER_KEY: f"pr{pr.number}",
+                        PR_TITLE_KEY: pr.title,
+                        PR_BODY_KEY: pr.body,
+                        PR_LABELS_KEY: [label.name for label in pr.labels],
+                        PR_COMMENTS_KEY: [comment.body for comment in pr.get_comments()],
+                        PR_ISSUE_CLOSED_KEY: [],
+                        PR_CHANGED_FILES_KEY: [],
+                    }
+                
 
                 # Get issues linked to the pull request
                 if pr.body:
                     issue_numbers = [
                         int(word[1:]) for word in pr.body.split() if word.startswith("#") and word[1:].isdigit()
                     ]
-                    for idx, issue_number in enumerate(issue_numbers):
+                    for issue_number in issue_numbers:
                         issue = repository.get_issue(issue_number)
                         if not issue.pull_request:
-                            pr_data[f"closed_issue_{idx}_number"] = issue.number
-                            pr_data[f"closed_issue_{idx}_title"] = issue.title
-                            pr_data[f"closed_issue_{idx}_body"] = issue.body
-                            pr_data[f"closed_issue_{idx}_labels"] = [label.name for label in issue.labels]
-                            pr_data[f"closed_issue_{idx}_comments"] = [comment.body for comment in issue.get_comments()]
+                            # Collect issue data
+                            issue_data = {
+                                ISSUE_NUMBER_KEY: issue.number,
+                                ISSUE_TITLE_KEY: issue.title,
+                                ISSUE_BODY_KEY: issue.body,
+                                ISSUE_LABELS_KEY: [label.name for label in issue.labels],
+                                ISSUE_COMMENTS_KEY: [comment.body for comment in issue.get_comments()],
+                            }
+
+                            pr_entry[PR_ISSUE_CLOSED_KEY].append(issue_data)
 
                     # Get changed files in the PR
                     files = pr.get_files()
@@ -119,29 +124,35 @@ def scrape_repo(
 
                             # Collect file data
                             file_data = {
-                                "filename": file.filename,
-                                "url_on_main": url_on_main,
-                                "url_in_pr": url_in_pr,
+                                FILENAME_KEY: file.filename,
+                                URL_IN_MAIN_KEY: url_on_main,
+                                URL_IN_PR_KEY: url_in_pr,
                             }
-                            pr_data["changed_files"].append(file_data)
+                            pr_entry[PR_CHANGED_FILES_KEY].append(file_data)
 
-                    # Write data to YAML file if conditions are met
-                    if pr_data["changed_files"]:
-                        with open(output_file, "a") as file:
-                            yaml.dump([pr_data], file, explicit_start=True)
-                        logging.info(f"Data for PR #{pr.number} written to {output_file}")
+                        # Write data to YAML file if conditions are met
+                        if (
+                            len(pr_entry[PR_CHANGED_FILES_KEY]) > 0
+                            and len(pr_entry[PR_ISSUE_CLOSED_KEY]) > 0
+                        ):
+                            if idx == 0:
+                                with open(output_file, "a") as file:
+                                    yaml.dump({PULL_REQUESTS_KEY: [pr_entry]}, file)
+                            else:
+                                with open(output_file, "a") as file:
+                                    yaml.dump([pr_entry], file, default_flow_style=False, indent=2)
+                            logging.info(f"Data for PR #{pr.number} written to {output_file}")
                 else:
-                    logging.warning(f"No issues linked to PR #{pr.number}")
+                    logging.info(f"No issues linked to PR #{pr.number}")
 
-                if g:
-                    # Check rate limit and sleep if necessary
-                    remaining, reset_timestamp, current_timestamp = check_rate_limit(g)
-                    if remaining < 10:
-                        sleep_time = max(0, reset_timestamp - current_timestamp + 10)  # Add buffer time
-                        logging.info(f"Rate limit low. Sleeping for {sleep_time} seconds.")
-                        time.sleep(sleep_time)
-                    else:
-                        time.sleep(0.72)  # Sleep to avoid hitting rate limit
+                # Check rate limit and sleep if necessary
+                remaining, reset_timestamp, current_timestamp = check_rate_limit(g)
+                if remaining < 10:
+                    sleep_time = max(0, reset_timestamp - current_timestamp + 10)  # Add buffer time
+                    logging.info(f"Rate limit low. Sleeping for {sleep_time} seconds.")
+                    time.sleep(sleep_time)
+                else:
+                    time.sleep(0.72)  # Sleep to avoid hitting rate limit
 
             except RateLimitExceededException:
                 logging.error("Rate limit exceeded. Sleeping for 60 seconds.")
@@ -160,15 +171,12 @@ def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, o
     :param repo: Org/name of the GitHub repo.
     :param output_file: Path to the output YAML file.
     """
-    if token:
-        g = Github(token)
-    else:
-        g = None
+    g = Github(token)
     DATA_PATH = PROJECT_DIR / f"{repo.replace('/', '_')}/{RAW_DATA_FILENAME}"
     TMP_DIR = PROJECT_DIR / f"{repo.replace('/', '_')}" / TMP_DIR_NAME
     makedirs(TMP_DIR, exist_ok=True)
     with open(DATA_PATH, "r") as file:
-        data_list = list(yaml.safe_load_all(file))
+        data = yaml.safe_load(file)
     logging.info(f"Analyzing data for repo: {repo}")
 
     if not output_file:
@@ -190,27 +198,29 @@ def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, o
         if overwrite:
             yaml.dump(metadata, of)
         start_analyzing = from_pr is None
-        for data_sublist in data_list:
-            data = data_sublist[0]
-            pr_number = int(data["pr_number"])  # Extract PR number from the key
+        
+        list_of_dicts = data[PULL_REQUESTS_KEY]
+        
+        for idx, dictionary in enumerate(list_of_dicts):
+            pr_number_int = int(dictionary[PR_NUMBER_KEY].strip("pr"))  # Extract PR number from the key
             if from_pr and not start_analyzing:
-                if pr_number == from_pr:
+                if pr_number_int == from_pr:
                     start_analyzing = True
                 else:
                     continue
-
-            url_in_pr = data["changed_files"][0]["url_in_pr"]
-            url_on_main = data["changed_files"][0]["url_on_main"]
+            url_in_pr = dictionary[PR_CHANGED_FILES_KEY][0][URL_IN_PR_KEY]
+            url_on_main = dictionary[PR_CHANGED_FILES_KEY][0][URL_IN_MAIN_KEY]
             extension = url_in_pr.split(".")[-1]
+
             new_file_path = TMP_DIR / f"new.{extension}"
             old_file_path = TMP_DIR / f"old.{extension}"
 
             # Download the files
             # 1. Download the file from the PR and name it new.obo/new.owl
-            download_file(url_in_pr, new_file_path, g)
+            download_file(url_in_pr, new_file_path, g, token)
 
             # 2. Download the file from the main branch and name it old.obo/old.owl
-            download_file(url_on_main, old_file_path, g)
+            download_file(url_on_main, old_file_path, g, token)
 
             # 3. Run the diff command
             if extension == "owl":
@@ -244,9 +254,9 @@ def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, o
                 # Capture the content written to the in-memory file-like object
                 all_changes = output.getvalue().splitlines()
             # Create a new YAML file with the changes
-            output_dict = {k:v for k,v in data.items() if k != "changed_files"}
-            output_dict["changes"] = all_changes
-            yaml.dump(output_dict, of, explicit_start=True)
+            output_dict = {key: value for key, value in dictionary.items() if key != PR_CHANGED_FILES_KEY}
+            output_dict[CHANGED_FILES_KEY] = all_changes
+            yaml.dump({PULL_REQUESTS_KEY: [output_dict]}, of) if idx == 0 else yaml.dump([output_dict], of, default_flow_style=False, indent=2)
             # delete new and old files
             shutil.rmtree(TMP_DIR)
             makedirs(TMP_DIR, exist_ok=True)

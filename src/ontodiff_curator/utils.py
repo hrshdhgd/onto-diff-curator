@@ -6,6 +6,7 @@ import subprocess
 import time
 from pathlib import Path
 
+from github import Github
 import requests
 
 RETRY_DELAY = 300  # 5 minutes
@@ -82,20 +83,19 @@ def owl2obo(owl_file: str):
         raise RuntimeError(f"Error converting OWL to OBO: {e}") from e
 
 
-def download_file(url, file_path, g):
+def download_file(url, file_path, g, token):
     while True:
         try:
-            if g:
-                # Check rate limit and sleep if necessary
-                remaining, reset_timestamp, current_timestamp = check_rate_limit(g)
-                if remaining < 10:
-                    sleep_time = max(0, reset_timestamp - current_timestamp + 10)  # Add buffer time
-                    logging.info(f"Rate limit low. Sleeping for {sleep_time} seconds.")
-                    time.sleep(sleep_time)
-                else:
-                    time.sleep(0.72)  # Sleep to avoid hitting rate limit
+            # Check rate limit and sleep if necessary
+            remaining, reset_timestamp, current_timestamp = check_rate_limit(g)
+            if remaining < 10:
+                sleep_time = max(0, reset_timestamp - current_timestamp + 10)  # Add buffer time
+                logging.info(f"Rate limit low. Sleeping for {sleep_time} seconds.")
+                time.sleep(sleep_time)
+            else:
+                time.sleep(0.72)  # Sleep to avoid hitting rate limit
 
-            response = requests.get(url, timeout=10)
+            response = requests.get(url, timeout=10, headers={"Authorization": f"token {token}"})
             response.raise_for_status()  # Raise an HTTPError for bad responses
             with open(file_path, "wb") as file:
                 file.write(response.content)
