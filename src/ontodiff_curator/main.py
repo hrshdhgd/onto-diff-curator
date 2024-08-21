@@ -55,6 +55,7 @@ def scrape_repo(
     g = Github(token)
     file_of_interest = REPO_RESOURCE_MAP.get(repo)
     repository = g.get_repo(repo)
+    first_line_written = False
 
     # Set default output file path if not provided
     if not output_file:
@@ -74,7 +75,7 @@ def scrape_repo(
     if min_pr_number:
         pull_requests = [pr for pr in pull_requests if pr.number >= min_pr_number]
 
-    for idx, pr in enumerate(pull_requests):
+    for pr in pull_requests:
         merge_url = f"https://api.github.com/repos/{repo}/pulls/{pr.number}/merge"
         merge_response = requests.get(merge_url, timeout=10, headers={"Authorization": f"token {token}"})
         if merge_response.status_code == 204:
@@ -89,7 +90,7 @@ def scrape_repo(
                         PR_CLOSED_ISSUES_KEY: [],
                         PR_CHANGED_FILES_KEY: [],
                     }
-                
+
 
                 # Get issues linked to the pull request
                 if pr.body:
@@ -135,9 +136,10 @@ def scrape_repo(
                             len(pr_entry[PR_CHANGED_FILES_KEY]) > 0
                             and len(pr_entry[PR_CLOSED_ISSUES_KEY]) > 0
                         ):
-                            if idx == 0:
+                            if first_line_written == False:
                                 with open(output_file, "a") as file:
                                     yaml.dump({PULL_REQUESTS_KEY: [pr_entry]}, file)
+                                first_line_written = True
                             else:
                                 with open(output_file, "a") as file:
                                     yaml.dump([pr_entry], file, default_flow_style=False, indent=2)
@@ -199,7 +201,10 @@ def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, o
             yaml.dump(metadata, of)
         start_analyzing = from_pr is None
         
-        list_of_dicts = data[PULL_REQUESTS_KEY]
+        try:
+            list_of_dicts = data[PULL_REQUESTS_KEY]
+        except TypeError:
+            import pdb; pdb.set_trace()
         
         for idx, dictionary in enumerate(list_of_dicts):
             pr_number_int = int(dictionary[PR_NUMBER_KEY].strip("pr"))  # Extract PR number from the key
