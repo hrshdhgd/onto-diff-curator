@@ -30,7 +30,14 @@ token_option = click.option(
 output_option = click.option("-o", "--output-file", help="Path to the output YAML file.")
 max_pr_option = click.option("--max-pr", type=int, default=None, help="Latest PR to scrape.")
 min_pr_option = click.option("--min-pr", type=int, default=None, help="Earliest PR to scrape.")
-overwrite_option = click.option('--overwrite/--no-overwrite', default=True, help="Enable or disable overwriting.")
+overwrite_option = click.option("--overwrite/--no-overwrite", default=True, help="Enable or disable overwriting.")
+from_pr_option = click.option("--from-pr", type=int, default=None, help="Earliest PR to analyze.")
+pr_status_option = click.option(
+    "--pr-status",
+    type=click.Choice(["open", "closed"], case_sensitive=False),
+    default="closed",
+    help="Status of the PRs to scrape.",
+)
 
 
 @click.group()
@@ -60,20 +67,22 @@ def main(verbose: int, quiet: bool):
 @output_option
 @max_pr_option
 @min_pr_option
+@pr_status_option
 @overwrite_option
-def scrape(repo: str, token: str, output_file: Union[Path, str], max_pr: int, min_pr: int, overwrite: bool):
+def scrape(repo: str, token: str, output_file: Union[Path, str], max_pr: int, min_pr: int, pr_status:str, overwrite: bool):
     """Run the ontodiff-curator's scrape command."""
-    scrape_repo(repo, token, output_file, max_pr, min_pr, overwrite)
+    scrape_repo(repo, token, output_file, max_pr, min_pr, pr_status, overwrite)
 
 
 @main.command()
 @repo_option
 @token_option
 @output_option
+@from_pr_option
 @overwrite_option
-def analyze(repo: str, token:str, output_file: Union[Path, str], overwrite: bool):
+def analyze(repo: str, token: str, output_file: Union[Path, str], from_pr: int, overwrite: bool):
     """Run the ontodiff-curator's analyze command."""
-    analyze_repo(repo, token, output_file, overwrite)
+    analyze_repo(repo, token, output_file, from_pr, overwrite)
 
 
 if __name__ == "__main__":

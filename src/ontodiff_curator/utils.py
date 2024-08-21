@@ -1,15 +1,16 @@
 """Utility functions for the OntoDiff Curator."""
 
 import logging
-from pathlib import Path
 import shlex
 import subprocess
 import time
-import requests
+from pathlib import Path
 
+import requests
 
 RETRY_DELAY = 300  # 5 minutes
 PROJECT_DIR = Path(__file__).parents[2]
+
 
 def check_rate_limit(g):
     """
@@ -80,8 +81,9 @@ def owl2obo(owl_file: str):
     except Exception as e:
         raise RuntimeError(f"Error converting OWL to OBO: {e}") from e
 
+
 def download_file(url, file_path, g):
-     while True:
+    while True:
         try:
             if g:
                 # Check rate limit and sleep if necessary
