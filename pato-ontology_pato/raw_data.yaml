@@ -5,7 +5,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/be47354fc340d082d46e85b54720d958b227a035/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/518536fde399913268bc945493bed936d4fc0f7e/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "As I understand it, bare URLs are discouraged in xrefs.  We should\
       \ instead use a stand Curie.  In the case of orcids => \r\n\r\nhttps://orcid.org/0000-0003-4148-4606\
       \ \r\n\r\n-> \r\n\r\norcid:0000-0003-4148-4606\r\n\r\n(although expansion should\
@@ -35,7 +35,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/4cc730eb0b83a44730c81e6898386a92ed30c807/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/f46a68f41edb5b031f2958bb687ca6fe101c1556/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: PMID:36924208
     issue_comments: []
     issue_labels: []
@@ -62,7 +62,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/ad4c591556a5a86f4b1afa15bc9dcb023460866a/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/51b9e0498b68ca3489accc3bd686f481e683352e/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "```yaml\r\nid: PATO:0001470\r\nname: proportionality to\r\ndef: \"\
       A quality inhering in a bearer by virtue of the bearer's magnitude in respect\
       \ to a related entity.\" [PATOC:nw]\r\nsynonym: \"proportion\" EXACT []\r\n\
@@ -93,7 +93,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/8cd1123bd2599feb9b70b248dbb597696c364429/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/22ec8473554fa8870e75671e9d61dfb55ca56f92/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Discussed in phenotype ontology editors' call 02/24/22\r\n\r\n'hyperplastic'\
       \ - PATO:0000644 is currently defined to be an increase in size, but this is\
       \ not always the case (if the cells are smaller). It should instead be defined\
@@ -129,7 +129,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/6867efb6f673578f16f9df30043c0981a0f171a0/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/73556d9758e9c7bd6e8221cee5e0a6841a72cc53/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Clarify the distinction between [mislocalised PATO:0000628](https://www.ebi.ac.uk/ols/ontologies/pato/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FPATO_0000628)\
       \ and [dislocated PATO:0001852](https://www.ebi.ac.uk/ols/ontologies/pato/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FPATO_0001852).\r\
       \nSee [comment]((https://github.com/obophenotype/upheno/pull/829#issuecomment-1138747275)\r\
@@ -165,7 +165,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/a1cb9d2916434cee36b957b6eab245d502b3410f/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/1ca4f964411ee35f46ce9541efc90bf3bca97a6d/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Radiation quality is a property inhering in the radiation energy\
       \ and not in the entity or medium exposed to the radiation. \r\n\r\n**New definition:**\r\
       \nIs a quality of radiation that reflects the fluence spectrum of charged and\
@@ -249,7 +249,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/8306e47e83f63b64173e1449a42b7ceeb25e857f/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/1ca4f964411ee35f46ce9541efc90bf3bca97a6d/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Individuals with congenital physical disorders of sexual development\
       \ (DSD; the term 'intersex' is more commonly known, but is a misnomer as people\
       \ with DSD are not between sexes, a third sex or hermaphrodites) are not represented\
@@ -309,7 +309,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/22eb87fe7ae2735d4393b9623e6c979163e99d99/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/e126416ba28a3871db1f46660facae105979be72/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Hi PATO team,\r\n\r\nI'll like to upload the term 'rusty', here's\
       \ the information for the term\r\n\r\nNew term: rusty\r\nParent: texture (http://purl.obolibrary.org/obo/PATO_0000150)\r\
       \nDefinition: A texture quality inhering in a bearer by virtue of the bearer's\
@@ -335,7 +335,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0ffc23b9a4a201ea5fac81e6c632de5d22029020/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/3d45ae557ceecbae19322cea2f6eeb4e0a206e32/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "PATO currently probably uses non-RO terms for relations when they\
       \ should be RO (from the report): \r\nsee http://dashboard.obofoundry.org/dashboard/pato/fp7.html\
       \ \r\nThis needs to be fixed by replacing them with RO terms\r\n@shawntanzk\
@@ -457,7 +457,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/d8b06741667609f4ed9e0561c0cad734223ffaea/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/0a07feb0fb2dccb4950c534e6ac94d4f17760af6/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: see https://github.com/obophenotype/cell-ontology/pull/1407#issuecomment-1015568088
     issue_comments: []
     issue_labels: []
@@ -474,7 +474,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/1d8bb265120341459f51f94aa5f56a8a17307e5c/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/3563a832be704f4eee77e0748969e6cb65337a76/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "PATO currently probably uses non-RO terms for relations when they\
       \ should be RO (from the report): \r\nsee http://dashboard.obofoundry.org/dashboard/pato/fp7.html\
       \ \r\nThis needs to be fixed by replacing them with RO terms\r\n@shawntanzk\
@@ -598,7 +598,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/a76d90ad46af38c305d7224f449be6b7f279d3f1/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/b1b9622e4e706a9674449733746c4ae0aff6354e/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: Either oio:created_by or dc:creator. Opinions welcome. @nicolevasilevsky
       @sbello what do you use usually? HP/MP/Mondo?
     issue_comments:
@@ -645,7 +645,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/a76d90ad46af38c305d7224f449be6b7f279d3f1/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/b1b9622e4e706a9674449733746c4ae0aff6354e/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: Either oio:created_by or dc:creator. Opinions welcome. @nicolevasilevsky
       @sbello what do you use usually? HP/MP/Mondo?
     issue_comments:
@@ -692,7 +692,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/a76d90ad46af38c305d7224f449be6b7f279d3f1/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/b1b9622e4e706a9674449733746c4ae0aff6354e/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: Either oio:created_by or dc:creator. Opinions welcome. @nicolevasilevsky
       @sbello what do you use usually? HP/MP/Mondo?
     issue_comments:
@@ -739,7 +739,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/9a4a368782a952a53d64e765e3b81aaa6ea53f54/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/5f3d7f8ddce7233ba96dd32e3c28df6385a35be8/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "We have a set of terms in CL that should be obsoleted and replaced\
       \ with PATO terms:\r\n\r\n'acidophilic cytoplasm' http://purl.obolibrary.org/obo/CP_0000027\r\
       \n'basophilic cytoplasm' http://purl.obolibrary.org/obo/CP_0000028\r\n'neutrophillic\
@@ -770,7 +770,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/3ae1e567ab9546c5d3d4e75dde7e3ec8df79b9e8/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/e473e3517d455b917f09306be4dbcc587c53efaf/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "The PATO definition of cystic (PATO:0001673) specifies \u201Cepithelium\
       \ bounded\u201D.\r\n\r\nBy my interpretation this mean that we can not use the\
       \ cyst in location pattern for terms like syringomyelia since in this case it\
@@ -808,7 +808,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/b93354158ad8a1ed8dfbea59aca19d802942771e/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/54e4827842788a0d05262d5d2dfb7dc69905c2e7/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "The \"position\" qualities encode spatial object relations, which\
       \ is fine, though it suggests that many of those qualities attach between objects\
       \ in a complementary way, essentially encoding mereotopology into qualities\
@@ -845,7 +845,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/1f4d70c5184b2b0e9894da59aad479ab99a7cc13/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/b88ae544b8e03c943f15822419cfee11c002e6a3/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Lack of a structure or reduction in numbers of a structure are clearly\
       \ morphological phenotypes.  \r\n\r\nTBD: how far up the classification hierarchy\
       \ to make the move,  Do we move 'has number of'  ?  Would users outside of the\
@@ -867,7 +867,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/cb54f170b78b04123a4ea509d2534e3610b2bab0/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/7d07d2553ae404394f3604652c8fac6191b714c6/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "a couple of corrections to make: \r\n\r\nanterior to PATO:0001632\
       \ has \"ventral_to\" as exact synonym\r\nventral to PATO:0001196 has \"anterior_to\"\
       \ as exact synonym\r\n"
@@ -884,7 +884,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/d7741784ef2bf3eb63ec5fe29333a2e701087289/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/7d07d2553ae404394f3604652c8fac6191b714c6/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Nlx has: \n\n'apical/basal', bipolar, bitufted, multipolar, other,\
       \ stellate, 'this is a columnar cell without a true dendrite', unipolar\n\n\
       Other than 'other' and the chatty text these should map to shortcut qualities\
@@ -987,7 +987,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/27702680e0a32cc36294b5e44f2af35d7041d59d/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/37676cf76bc601d92b9235aa6dcf53e592c9c5f1/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "This will be tricky because diandrous and monandrous mean different\
       \ things for plants and animals. How should we differentiate in the label?\r\
       \n\r\nPreferred Label\r\nDiandrous\r\nMonandrous\r\n\r\nDefinition\r\nDiandrous\
@@ -1025,7 +1025,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/3c2591df3b42c32aee3dd3a7be412a97fcae09ef/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/4b621d010020606159dd06cfb73b618603edb247/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Cross reference [EnvironmentOntology/ENVO#1081](https://github.com/EnvironmentOntology/envo/issues/1081)\r\
       \n\r\nDear PATO team,\r\nwith reference to the ENVO issue above, We'll be requesting\
       \ a set of qualities that we think are general enough for PATO. This is connected\
@@ -1052,7 +1052,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/a67a51d52668f7b2e2f5dead71a6e35dacb04e83/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/b88ae544b8e03c943f15822419cfee11c002e6a3/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Preferred term label:\r\ncell with bitufted dendrite morphology\r\
       \n\r\nDefinition:\r\nA cell morphology that inheres in neurons with dendrites\
       \ that are bidirectional, emerging from opposite ends of the soma, with the\
@@ -1119,7 +1119,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/c27a409d931d9838acfcd9f160237778eb97aed6/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/dea7f2f64af789c83dc1c4817e4ca9daaac7b79a/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "See comments on https://github.com/obophenotype/cell-ontology/pull/1078\
       \ \r\n\r\n1. Are branches only dendritic branches?\r\n2. It should be 'occurs'\
       \ instead of 'occur' in the gloss."
@@ -1239,7 +1239,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/293071cc5ee58ada92f4ecfbf53c3490337eb18f/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/bf216af289adad4100c9861a430a7c3fa1d4e905/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Preferred term label:\r\nmultipolar neuron morphology\r\n\r\nDefinition:\r\
       \nA cell morphology that inheres in neurons which possess a single axon and\
       \ many dendrites and dendritic branches.\r\nhttps://en.wikipedia.org/w/index.php?title=Multipolar_neuron&oldid=1022942606\r\
@@ -1257,7 +1257,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/9d0c8d36564f447dbb4530df4f05c7a26f5819eb/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/127082e59f3b7e8f381cff468007e0de8325bf61/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "\r\n**Preferred term label:**\r\nunipolar neuron morphology\r\n\r\
       \n**Definition:**\r\nA cell morphology that inheres in neurons with only one\
       \ process, called a neurite, that extends from the cell body. The neurite then\
@@ -1282,7 +1282,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/f24099041fcb6a225c17efe787fb37afdb0d7df8/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/096655da421e8800e2fc4d5c8008ff4cb94b00a3/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: Please see https://github.com/EcologicalSemantics/ecocore/issues/137
     issue_comments:
     - I would also like to transform some of the organism classes to qualities and
@@ -1311,7 +1311,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/77ade6715ccdcb834476da606cc7f5f4fe324091/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/80c3f3e6818f404ccab91a50adf27065269ebae9/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "**Term:** \r\npyramidal family morphology\r\n\r\n**Definition:**\r\
       \nA cell morphology that inheres in neurons which have a pyramidal shaped soma,\
       \ a single axon, a large apical dendrite and multiple basal dendrites.\r\ndoi:10.1016/b978-0-12-369497-3.10004-4\r\
@@ -1439,7 +1439,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/df9e7335c57528df080c8621e00db18ff2264c65/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/f5d5cf3711ba7221359fadd896e48376ebed949b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "**Term:** \r\nspiny stellate cell morphology\r\n\r\n**Definition:**\r\
       \nA cell morphology that inheres in neurons which have spiny basal dendrites\
       \ and resemble pyramidal cells but lose their apical dendrites as they mature.\
@@ -1463,7 +1463,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/2ba1fe838bd68c12775d9b15897e512635b5e57e/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/0dd7198547918c81ee7d4279803e8853346f33ea/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "**Term:** \r\nbitufted cell morphology\r\n\r\n**Definition:**\r\n\
       A cell morphology that inheres in neurons which have tufts of dendrites extending\
       \ from two opposite poles of the soma, and have axons that form a plexus which\
@@ -1484,7 +1484,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/424a050e92d5abf96ee075d4ee4a465a13f07a03/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/693512f84c0fd2c56c21d398ec46253ffa9e1361/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "**Term:** \r\nchandelier cell morphology\r\n\r\n**Definition:**\r\
       \nA cell morphology that inheres in neurons which are small and round, and make\
       \ highly specialized synapses with the axon initial segments of pyramidal neurons\
@@ -1509,7 +1509,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/fe8f8ddd7860e87d35df5bb2483128496553b05b/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/27b40836efe932f31556b2c3c563cc4fa86367fb/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "**Term:** \r\nstellate morphology\r\n\r\n**Definition:**\r\nA cell\
       \ morphology that inheres in neurons which have dendritic processes radiating\
       \ for the cell body that forms a star-like shape\r\n_Note: Need to find ref_\r\
@@ -1535,7 +1535,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/c820a8f6aae88ab0f9ebee5a86c53e929a13a14b/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/8948294548caf31a6f3ff94c8462115dfdd2ead2/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "**Term:** \r\nmartinotti morphology\r\n\r\n**Definition:**\r\nA cell\
       \ morphology that inheres in neurons which are large and non-spiny, with dendrites\
       \ radiating in a multipolar or bitufted pattern, often favouring the descending\
@@ -1572,7 +1572,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/50e976e179c98cb2ac31a08d669c5302592047c3/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/664771f48409d5731020265844c7a8e5305175b2/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "**Term:** \r\nbipolar morphology\r\n\r\n**Definition:**\r\nA cell\
       \ morphology that inheres in neurons which have two principal dendrites, one\
       \ ascending and one descending from the cell body, which begins to branch some\
@@ -1596,7 +1596,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/f34faff6731cc271d34458eafaf36c1fc8e3f7c1/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/c0bb050f61ce4e93cbd3a4421256dae059c0e14e/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "**Term:** \r\nbasket cell morphology\r\n\r\n**Definition:**\r\nA\
       \ cell morphology that inheres in neurons that have sparsely spinous dendrite,\
       \ which spread radially and tangentially, with axons on the pial side of the\
@@ -1678,7 +1678,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/804f40a5c173e8a330d593c14775d85cab698048/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/7abc91b1130d65385480bff0c18ddf447e5adba7/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "**Term:** \r\nneurogliaform morphology\r\n\r\n**Definition:**\r\n\
       A cell morphology that inheres in neurons which have a small round soma, a large\
       \ number of short, smooth, or slightly beaded primary dendrites that give rise\
@@ -1698,7 +1698,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/9f792170697d9c9329e911dfa57037651231ceeb/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/cd5c8002d6d72a6c51bd24f9303314c0d928788f/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'see: https://github.com/obophenotype/human-phenotype-ontology/issues/5587#issuecomment-619379508'
     issue_comments: []
     issue_labels:
@@ -1714,7 +1714,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/004dbe4c57f2d8526c646abe28406823c1883eb3/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/cd5c8002d6d72a6c51bd24f9303314c0d928788f/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "See https://github.com/obophenotype/bio-attribute-ontology/issues/39\r\
       \n\r\nFor any biological use of PATO, it's guaranteed the concept required is\
       \ 'mass' not 'weight'. "
@@ -1731,7 +1731,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/6b268d8a88c12f61418b0fe4bee025ce7471ea85/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/e7dd0c24fb62bae63a169e39f652f221af173350/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "NTR: fragmented\r\nDef: Existing or functioning as though broken\
       \ into separate parts; disorganized; disunified.\r\nSource: dictionary.com/browse/unfragmented\r\
       \nParent: PATO_0000141 structure \r\n@pnrobinson @dosumis @matentzn does this\
@@ -1765,7 +1765,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/c10e3de8efbe7f2811292670ae1921e6be294cf9/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/a6463df0d50a287699fbd95b5c1300154b008861/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "\r\ncellular quality\r\n.   .  nuclear/cytoplasmic ratio: 'A quality\
       \ inhering in a cell by virtue of the ratio between the volume of its nucleus\
       \ and the volume of its cytoplasm' [Wikipedia:https://en.wikipedia.org/wiki/NC_ratio];\
@@ -1789,7 +1789,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/ee49d53cc162925de73bc2cb98f76cee4bbfa1d3/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/e7dd0c24fb62bae63a169e39f652f221af173350/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "The following terms should have the \r\nsubset: relational_slim\r\
       \nadded to the term definition. The common parent term does have the subset\
       \ added.\r\n\r\n[Term]\r\nid: PATO:0040042\r\nname: decreased proportionality\
@@ -1808,7 +1808,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/679dc6e6b007bc8cd2dfeb1fd2bbda89d19842a4/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/8923fc2f29718a5c55b5f5346609d77b5c27928f/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "On the [POTATO call on 07/30/30](https://docs.google.com/document/d/1WrQanAMuccS-oaoAIb9yWQAd4Rvy3R3mU01v9wHbriM/edit),\
       \ we decided we should:\r\n\r\n- Create new terms:\r\n   - physical absence\
       \ (child of 'physical object quality')\r\n   - absent process (child of 'process\
@@ -1879,7 +1879,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/3282abe3b5b03150fb5c73cb521f0d3569e133c2/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/4a927026b5fac9d2809c1eee3be39a9e9284c1dd/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "NTR: fragmented\r\nDef: Existing or functioning as though broken\
       \ into separate parts; disorganized; disunified.\r\nSource: dictionary.com/browse/unfragmented\r\
       \nParent: PATO_0000141 structure \r\n@pnrobinson @dosumis @matentzn does this\
@@ -1913,7 +1913,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/9bfa025f4081901711c573e10d183630fdb1baf4/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/4a927026b5fac9d2809c1eee3be39a9e9284c1dd/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "http://obo-dashboard-test.ontodev.com/\r\n\r\nReport here: http://obo-dashboard-test.ontodev.com/pato/dashboard.html"
     issue_comments:
     - "growth rate [PATO:0001492]\r\nproposed definition: the rate or speed of the\
@@ -1959,7 +1959,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0e39bec008589a8ccdac2813c8cc2e2fe667585c/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/e35de202426f22049aba004d1f7f87b67743da10/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "We would like to make some updates to the term broken (PATO:0001444)\r\
       \n\r\nCurrently the definition of broken is circular, suggest modifying the\
       \ definition to:\r\nA structural quality inhering in a bearer by virtue of the\
@@ -1982,7 +1982,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/00a3f26ed84fe83929e562a2e3e03240f0f0a531/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/be03805a72c6759bddbdf0788842793c11c5d3a0/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Currently we have this:\r\n\r\n![image](https://user-images.githubusercontent.com/7070631/74434390-429f9800-4e5a-11ea-97d2-d03d45892031.png)\r\
       \n\r\nThis causes some [confusion](https://github.com/obophenotype/upheno/issues/510#issuecomment-584346349)\
       \ as phenotypes with an abnormal prominence of something classify under abnormal\
@@ -2007,7 +2007,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/1d019744df5cca5b7b34a2abf11d2ab812817ede/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/f355fdeb32aebfb4d7e5006b5f65c596537d524a/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "new terms:\r\ndecreased/increased proportionality to\r\n\r\nparent:\r\
       \n'proportionality to'"
     issue_comments: []
@@ -2024,7 +2024,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/d8e64085d1e2bac7c68cb6c27e8c500457577afc/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/a5efdb903cbca172ac62a3f3bce6a34fa088d3c7/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Need terms to describe increased and decreased velocity \r\n\r\n\r\
       \nincreased linear velocity:  A distance traveled in a specific time that is\
       \ relatively high.\r\nis_a increased process quality\r\ndecreased linear velocity:\
@@ -2043,7 +2043,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/e6f558a8b537281e4a5303013988da8518528ca3/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/a5efdb903cbca172ac62a3f3bce6a34fa088d3c7/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "carried over from:\r\n\r\nhttps://github.com/EnvironmentOntology/envo/issues/894\r\
       \n\r\nWe want these to be sibling concepts"
     issue_comments: []
@@ -2060,7 +2060,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/85231f46f26130be1be3585da7d8be2f84e05235/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/a5efdb903cbca172ac62a3f3bce6a34fa088d3c7/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Please add ''smooth'' as a related synonym for ''unserrated''. '
     issue_comments: []
     issue_labels: []
@@ -2079,7 +2079,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/9cce84532b4f7016e2f617fea1bfd2d7f4e17d9d/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/76a0507c0b7ef1ecad99e066d27ff680b360785b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "- increased width and length\r\n- decreased width and length"
     issue_comments: []
     issue_labels: []
@@ -2094,7 +2094,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/b51a5588855ed8b2a141222a2bf85e5d6d803c2a/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/14fc55f490d9ce02737109021f18d2a1c886766a/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Hi all, \r\n\r\nOver in ENVO, we have some requests that would benefit\
       \ from a \"shaded\" quality (e.g. https://github.com/EnvironmentOntology/envo/pull/899)\r\
       \n\r\nThis would likely be a physical quality inhering in a bearer by virtue\
@@ -2117,7 +2117,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/e4d751a1b9c68bdcc69c83396535c88a5c278617/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/c1f137e0eb6b660eb8496f0c7f464053cde5a4bd/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Name | Value\r\n-- | --\r\nLabel | parous\r\nDefinition | An organismal\
       \ quality of having successfully reproduced.\r\nDefinition source | EFO_0002947\
       \ parous\r\nParent | PATO_0001995 organismal quality\r\n\r\nRequest by VEuPathDB\
@@ -2166,7 +2166,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/68272f914413f29ef373f730430065f17b253d4a/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/e90343ac935d2e25c7c7dc03c25413fd036e7b84/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Hello,\r\n\r\nI need to curate a double haploid (DH) pear.\r\n\r\n\
       Looking on https://www.ebi.ac.uk/ols/ontologies/pato/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FPATO_0001374\r\
       \nI do not see double haploid.\r\n\r\nIs it because they artificially doubled?\r\
@@ -2284,7 +2284,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2311,7 +2311,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2338,7 +2338,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2365,7 +2365,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2392,7 +2392,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2419,7 +2419,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2446,7 +2446,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2473,7 +2473,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2500,7 +2500,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2527,7 +2527,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2554,7 +2554,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2581,7 +2581,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2608,7 +2608,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2635,7 +2635,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2662,7 +2662,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2689,7 +2689,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2716,7 +2716,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2743,7 +2743,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2770,7 +2770,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2797,7 +2797,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2824,7 +2824,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2851,7 +2851,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2878,7 +2878,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2905,7 +2905,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2932,7 +2932,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2959,7 +2959,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -2986,7 +2986,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3013,7 +3013,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3040,7 +3040,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3067,7 +3067,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3094,7 +3094,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3121,7 +3121,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3148,7 +3148,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3175,7 +3175,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3202,7 +3202,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3229,7 +3229,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3256,7 +3256,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3283,7 +3283,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3310,7 +3310,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3337,7 +3337,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/0b416fd47925fac75ce81f20a21497cca14d6496/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/af5cabb7246eee950c7391186dd257ee88481e0b/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "pato-edit.obo currently has no import statments. It should have import\
       \ statements for:\r\n\r\npato_ext.owl\r\nimports/...\r\n\r\npato_ext.owl currently\
       \ imports pato! AND various import files.  These import statments should be\
@@ -3365,7 +3365,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/2671254e321f6191baab150be6d83ba7894f2da5/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/c5d4f8dcf1fc73913cfc12b04a30fc087de36e21/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: We would like terms for 'sex-specific', 'male-specific' and 'female-specific'
       to use in the Drosphila Anatomy Ontology to classify anatomical entities present
       only in one sex. These can have 'sexually dimorphic' as a parent.
@@ -3385,7 +3385,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/99a59530e497296d454eff60929128106827ea71/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/684b6e325923a32e92a507964c6038b94ad9b991/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Subtypes of `spatial distribution of a process` (see #252)\r\n\r\n\
       Examples from @mah11:\r\n\r\nE.g.\r\n\r\nid: FYPO:0004322\r\nname: decreased\
       \ spatial extent of CENP-A containing nucleosome assembly\r\ndef: \"A cellular\
@@ -3431,7 +3431,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/8d83f09d67bfa3a5ebf820d1c1e282bd9f2f9671/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/8497557d18948f3111425f7825f9115e5d440203/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Please add 'hyaline' as synonym for 'transparent' PATO:0000964. The\
       \ definition for hyaline from merriam webster is: transparent or nearly so and\
       \ usually homogeneous\r\n  https://www.merriam-webster.com/dictionary/hyaline\r\
@@ -3450,7 +3450,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/27f424e0ea60ac2961e6e4f1fe8672af88098719/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/8497557d18948f3111425f7825f9115e5d440203/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "At the [POTATO workshop](https://docs.google.com/document/d/1rFk-a8VXZGchpclneKOYuZMr6tTB9RCKctOkBPjOH1c/edit#)\
       \ we decided color should be moved. \r\n\r\n@cmungall @Achchuthan @gmicklem"
     issue_comments: []
@@ -3467,7 +3467,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/fcc1e9e043db4f7806aea901e842b18dd0720355/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/8497557d18948f3111425f7825f9115e5d440203/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "* rate of occurrence:  The number of repeated events per unit time,\
       \ occurring in a repeating series.  (e.g. the number of heart beats occurring\
       \ over 1 minute) .\r\n* rate of continuous process: The rate of output of a\
@@ -3487,7 +3487,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/2511c08e218ec842ae45a8613f8b66f37818db69/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/072fe8dcbbb0c7bab9268afc5cd0efcc9adac7b8/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "New term request:  'single'\ndef:  A quality inhering in a bearer\
       \ by virtue of the bearer's being present as one entity.\n\nis_a: 'present'\
       \ PATO:0000467\nComment: Need to discuss this as possibly equivalent to PATO:0000070\
@@ -3518,7 +3518,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/dc4a4c915c465b8a0c2f721a586cb776d6acea8e/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/3abecb6b5d86b332a2edec1f43fa31bf075f09c6/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "In PATO, PATO:0001334 ! diameter is_a PATO:0000122 ! length. This\
       \ causes undesirable inferences for fission yeast cell shape phenotypes in FYPO.\r\
       \n\r\nMore generally, it looks like PATO isn't internally consistent in how\
@@ -3559,7 +3559,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/196b1b53da95dfd9e8e9043cce7cb32459c8d450/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/22f4e3793a79432c6bbda8a5c9160a7e81b07b03/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "New term request:\r\nfibrotic\r\nparent: PATO_0000025 composition\r\
       \nsuggested def: Fibrosis is the formation of excess fibrous connective tissue\
       \ in an organ or tissue in a reparative or reactive process. \r\ndef xref: https://en.wikipedia.org/wiki/Fibrosis"
@@ -3578,7 +3578,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/544b7b36a1b44ecd66951bbd5c43d0b378186aea/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/22f4e3793a79432c6bbda8a5c9160a7e81b07b03/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "definition:        An orientation quality inhering in a bearer by\
       \ virtue of the bearer having a position that is directed posteroventrally.\
       \     \r\nis_a: orientation\r\nexact synonym: posteroventrally oriented\r\n"
@@ -3606,7 +3606,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/ab3560816a214f09d911e0d095446682cbd9562c/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/54379098f2aac390c85a7b76a5e6295b83c8ed97/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Hi everybody,\nwe need a term called \"dysplastic growth\" for use\
       \ in the definition of Testicular dysgenesis (current definition is below and\
       \ is incorrect -- need to replace \"aplastic growth\" with \"dysplastic growth\"\
@@ -3625,7 +3625,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/1c1cf5e9e602c1a48b830f90e0f15dc615981864/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/92574ffa4129fa3122a5ac3fe34837b55e8632f7/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Under http://purl.obolibrary.org/obo/PATO_0001324 bilateral symmetry,\
       \ add synonym \"pennate\". This terms is used to describe bilaterally symmetrical\
       \ diatoms.\r\n\r\nUnder http://purl.obolibrary.org/obo/PATO_0001325 radial symmetry,\
@@ -3644,7 +3644,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/23be77da2de79ffb4ea7bb168f43df993f7e8478/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/92574ffa4129fa3122a5ac3fe34837b55e8632f7/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "These classes (and their child classes) would better fit as children\
       \ of organismal quality, rather than physical object quality.\r\norganismal\
       \ quality (PATO:0001995) : A quality that inheres in an entire organism or part\
@@ -3672,7 +3672,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/260e3f950220d39e4c54a954b29b6ec7eb69ac56/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/e77e90801e5016f5871707fa01a3a10ebc32e4b0/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "def: A positional quality inhering in a bearer by virtue of some\
       \ aspect of that bearer beginning from a position on another entity. \n\nis_a:\
       \ position\nPlease add to relational slim\n\nThanks,\nWasila and Alex\n"
@@ -3690,7 +3690,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/9c19d8c78ea3d6378e5c329f8e5247113818242c/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/693e8f1040dec28921b48a7b01bcfeae7067d7cc/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Def: Shaped like a ring
 
       Syn: annular
@@ -3709,7 +3709,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/3cd39227405138d8349448d57b0c7e9525115616/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/6f28a20a35563cfadc8e269e5f6e5b9bca74df9e/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "fenestrated PATO:0002064 (currently a child of 'shape') is more appropriately\
       \ a child of 'structure, cavities' (PATO:0002014)\r\n\r\n"
     issue_comments: []
@@ -3725,7 +3725,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/b77956a2548434a81d3a54c0d2f38bd1638af578/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/c2db6c43d9ec1c683fa701d91724b44c6ab742e8/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: '''approaches'' '
     issue_comments: []
     issue_labels: []
@@ -3740,7 +3740,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/470042f852cabac07e3c52ccfc8b8b2d54cf124e/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/c2db6c43d9ec1c683fa701d91724b44c6ab742e8/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: Should be "being" rather than "bing"
     issue_comments: []
     issue_labels: []
@@ -3755,7 +3755,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/e1d8df979b85bd5e153f121397df6c1ddc516714/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/b7e1f191dd056a354567be792221fe1f0ed8a9d0/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "id: PATO:0001816\r\nname: increased fatigability\r\ndef: \"A fatigability\
       \ which is relatively high.\" [PATOC:GVG]\r\nsubset: disposition_slim\r\nsubset:\
       \ value_slim\r\nsynonym: \"high fatigability\" EXACT []\r\nis_a: PATO:0001815\
@@ -3803,7 +3803,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/b02bdfa4de6f759d1e51d7850f3f61eb30a53375/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/1e8e8804d58c7c70ba6526706d349673d2a05711/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "It seems there is an underscore missing:\r\n\r\nname: is opposite_of\r\
       \n\r\ninstead of\r\n\r\nname: is_opposite_of\r\n\r\nCheers,\r\nGerhard Mayer\r\
       \n"
@@ -3820,7 +3820,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/dbfd8b9034793c691b1b695c8edcf76d874e0e48/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/6f48d52eb4064370dcb11f3aa81acd1d7c7fea28/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Similar to `quality of a liquid` etc.
 
 
@@ -3873,7 +3873,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/b3193e72c3fc405540723e428d44fc41c1c0422c/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/3d295a6e3ff274db1da4a87af7989d3adc87daea/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: "Could you please prefix all obsolete term labels?\r\nWhen importing\
       \ PATO and BFO in a given ontology, Prot\xE9g\xE9 will not properly display\
       \ the BFO occurrent and continuant classes because classes with the same labels\
@@ -3891,7 +3891,7 @@ pull_requests:
   - filename: src/ontology/pato-edit.obo
     url_in_pr: https://github.com/pato-ontology/pato/raw/7bb290123872b61c86b873108a249980b3bc22e2/src/ontology/pato-edit.obo
     url_on_main: https://github.com/pato-ontology/pato/raw/9ce275664d58ec25cb261c105166e489af94f823/src/ontology/pato-edit.obo
-  pr_closed_issue:
+  pr_closed_issues:
   - issue_body: 'Currently there are 4 sublasses of ''malformed'' - anterioralized,
       dorsalized, posterioralized, and ventralized - whose definitions require complete
       lack of the opposite structures (e.g. in an anterioralized embryo, there are
