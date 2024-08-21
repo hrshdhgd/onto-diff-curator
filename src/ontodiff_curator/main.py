@@ -1,6 +1,5 @@
 """Main module for the OntoDiffCurator package."""
 
-from collections import defaultdict
 import datetime
 import io
 import logging
@@ -8,7 +7,7 @@ import shutil
 import time
 from os import makedirs
 from pathlib import Path
-from typing import List, Union
+from typing import Union
 
 import requests
 import requests_cache
@@ -17,7 +16,25 @@ from github import Github, RateLimitExceededException
 from oaklib import get_adapter
 from oaklib.io.streaming_kgcl_writer import StreamingKGCLWriter
 
-from ontodiff_curator.constants import CHANGED_FILES_KEY, FILENAME_KEY, ISSUE_BODY_KEY, ISSUE_COMMENTS_KEY, ISSUE_LABELS_KEY, ISSUE_NUMBER_KEY, ISSUE_TITLE_KEY, PR_BODY_KEY, PR_CHANGED_FILES_KEY, PR_COMMENTS_KEY, PR_CLOSED_ISSUES_KEY, PR_LABELS_KEY, PR_NUMBER_KEY, PR_TITLE_KEY, PULL_REQUESTS_KEY, URL_IN_PR_KEY, URL_IN_MAIN_KEY
+from ontodiff_curator.constants import (
+    CHANGED_FILES_KEY,
+    FILENAME_KEY,
+    ISSUE_BODY_KEY,
+    ISSUE_COMMENTS_KEY,
+    ISSUE_LABELS_KEY,
+    ISSUE_NUMBER_KEY,
+    ISSUE_TITLE_KEY,
+    PR_BODY_KEY,
+    PR_CHANGED_FILES_KEY,
+    PR_CLOSED_ISSUES_KEY,
+    PR_COMMENTS_KEY,
+    PR_LABELS_KEY,
+    PR_NUMBER_KEY,
+    PR_TITLE_KEY,
+    PULL_REQUESTS_KEY,
+    URL_IN_MAIN_KEY,
+    URL_IN_PR_KEY,
+)
 from ontodiff_curator.utils import PROJECT_DIR, check_rate_limit, download_file, owl2obo
 
 # Configure logging
@@ -40,7 +57,13 @@ TMP_DIR_NAME = "tmp"
 
 
 def scrape_repo(
-    repo: str, token: str, output_file: Union[Path, str], max_pr_number=None, min_pr_number=None, pr_status = "merged", overwrite: bool = True
+    repo: str,
+    token: str,
+    output_file: Union[Path, str],
+    max_pr_number=None,
+    min_pr_number=None,
+    pr_status="merged",
+    overwrite: bool = True,
 ) -> None:
     """
     Get pull requests and corresponding issues they close along with the ontology resource files.
@@ -82,15 +105,14 @@ def scrape_repo(
             try:
                 # Initialize data structure for the pull request
                 pr_entry = {
-                        PR_NUMBER_KEY: f"pr{pr.number}",
-                        PR_TITLE_KEY: pr.title,
-                        PR_BODY_KEY: pr.body,
-                        PR_LABELS_KEY: [label.name for label in pr.labels],
-                        PR_COMMENTS_KEY: [comment.body for comment in pr.get_comments()],
-                        PR_CLOSED_ISSUES_KEY: [],
-                        PR_CHANGED_FILES_KEY: [],
-                    }
-
+                    PR_NUMBER_KEY: f"pr{pr.number}",
+                    PR_TITLE_KEY: pr.title,
+                    PR_BODY_KEY: pr.body,
+                    PR_LABELS_KEY: [label.name for label in pr.labels],
+                    PR_COMMENTS_KEY: [comment.body for comment in pr.get_comments()],
+                    PR_CLOSED_ISSUES_KEY: [],
+                    PR_CHANGED_FILES_KEY: [],
+                }
 
                 # Get issues linked to the pull request
                 if pr.body:
@@ -132,11 +154,8 @@ def scrape_repo(
                             pr_entry[PR_CHANGED_FILES_KEY].append(file_data)
 
                         # Write data to YAML file if conditions are met
-                        if (
-                            len(pr_entry[PR_CHANGED_FILES_KEY]) > 0
-                            and len(pr_entry[PR_CLOSED_ISSUES_KEY]) > 0
-                        ):
-                            if first_line_written == False:
+                        if len(pr_entry[PR_CHANGED_FILES_KEY]) > 0 and len(pr_entry[PR_CLOSED_ISSUES_KEY]) > 0:
+                            if not first_line_written:
                                 with open(output_file, "a") as file:
                                     yaml.dump({PULL_REQUESTS_KEY: [pr_entry]}, file)
                                 first_line_written = True
@@ -200,12 +219,14 @@ def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, o
         if overwrite:
             yaml.dump(metadata, of)
         start_analyzing = from_pr is None
-        
+
         try:
             list_of_dicts = data[PULL_REQUESTS_KEY]
         except TypeError:
-            import pdb; pdb.set_trace()
-        
+            import pdb
+
+            pdb.set_trace()
+
         for idx, dictionary in enumerate(list_of_dicts):
             pr_number_int = int(dictionary[PR_NUMBER_KEY].strip("pr"))  # Extract PR number from the key
             if from_pr and not start_analyzing:
@@ -261,7 +282,11 @@ def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, o
             # Create a new YAML file with the changes
             output_dict = {key: value for key, value in dictionary.items() if key != PR_CHANGED_FILES_KEY}
             output_dict[CHANGED_FILES_KEY] = all_changes
-            yaml.dump({PULL_REQUESTS_KEY: [output_dict]}, of) if idx == 0 else yaml.dump([output_dict], of, default_flow_style=False, indent=2)
+            (
+                yaml.dump({PULL_REQUESTS_KEY: [output_dict]}, of)
+                if idx == 0
+                else yaml.dump([output_dict], of, default_flow_style=False, indent=2)
+            )
             # delete new and old files
             shutil.rmtree(TMP_DIR)
             makedirs(TMP_DIR, exist_ok=True)

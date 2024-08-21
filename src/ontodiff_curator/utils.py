@@ -6,7 +6,6 @@ import subprocess
 import time
 from pathlib import Path
 
-from github import Github
 import requests
 
 RETRY_DELAY = 300  # 5 minutes
@@ -84,6 +83,7 @@ def owl2obo(owl_file: str):
 
 
 def download_file(url, file_path, g, token):
+    """Download a file from a URL and save it to the specified path."""
     while True:
         try:
             # Check rate limit and sleep if necessary

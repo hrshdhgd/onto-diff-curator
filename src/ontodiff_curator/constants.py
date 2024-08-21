@@ -1,3 +1,5 @@
+"""Constants used in the ontodiff_curator module."""
+
 PULL_REQUESTS_KEY = "pull_requests"
 CHANGED_FILES_KEY = "changed_files"
 PR_NUMBER_KEY = "id"
@@ -8,7 +10,7 @@ PR_COMMENTS_KEY = "pr_comments"
 PR_CLOSED_ISSUES_KEY = "pr_closed_issues"
 PR_CHANGED_FILES_KEY = "pr_changed_files"
 
-ISSUE_NUMBER_KEY ="issue_number"
+ISSUE_NUMBER_KEY = "issue_number"
 ISSUE_TITLE_KEY = "issue_title"
 ISSUE_BODY_KEY = "issue_body"
 ISSUE_LABELS_KEY = "issue_labels"

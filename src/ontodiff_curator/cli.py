@@ -69,7 +69,9 @@ def main(verbose: int, quiet: bool):
 @min_pr_option
 @pr_status_option
 @overwrite_option
-def scrape(repo: str, token: str, output_file: Union[Path, str], max_pr: int, min_pr: int, pr_status:str, overwrite: bool):
+def scrape(
+    repo: str, token: str, output_file: Union[Path, str], max_pr: int, min_pr: int, pr_status: str, overwrite: bool
+):
     """Run the ontodiff-curator's scrape command."""
     scrape_repo(repo, token, output_file, max_pr, min_pr, pr_status, overwrite)
 
