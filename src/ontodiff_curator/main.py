@@ -17,7 +17,7 @@ from github import Github, RateLimitExceededException
 from oaklib import get_adapter
 from oaklib.io.streaming_kgcl_writer import StreamingKGCLWriter
 
-from ontodiff_curator.constants import CHANGED_FILES_KEY, FILENAME_KEY, ISSUE_BODY_KEY, ISSUE_COMMENTS_KEY, ISSUE_LABELS_KEY, ISSUE_NUMBER_KEY, ISSUE_TITLE_KEY, PR_BODY_KEY, PR_CHANGED_FILES_KEY, PR_COMMENTS_KEY, PR_ISSUE_CLOSED_KEY, PR_LABELS_KEY, PR_NUMBER_KEY, PR_TITLE_KEY, PULL_REQUESTS_KEY, URL_IN_PR_KEY, URL_IN_MAIN_KEY
+from ontodiff_curator.constants import CHANGED_FILES_KEY, FILENAME_KEY, ISSUE_BODY_KEY, ISSUE_COMMENTS_KEY, ISSUE_LABELS_KEY, ISSUE_NUMBER_KEY, ISSUE_TITLE_KEY, PR_BODY_KEY, PR_CHANGED_FILES_KEY, PR_COMMENTS_KEY, PR_CLOSED_ISSUES_KEY, PR_LABELS_KEY, PR_NUMBER_KEY, PR_TITLE_KEY, PULL_REQUESTS_KEY, URL_IN_PR_KEY, URL_IN_MAIN_KEY
 from ontodiff_curator.utils import PROJECT_DIR, check_rate_limit, download_file, owl2obo
 
 # Configure logging
@@ -86,7 +86,7 @@ def scrape_repo(
                         PR_BODY_KEY: pr.body,
                         PR_LABELS_KEY: [label.name for label in pr.labels],
                         PR_COMMENTS_KEY: [comment.body for comment in pr.get_comments()],
-                        PR_ISSUE_CLOSED_KEY: [],
+                        PR_CLOSED_ISSUES_KEY: [],
                         PR_CHANGED_FILES_KEY: [],
                     }
                 
@@ -108,7 +108,7 @@ def scrape_repo(
                                 ISSUE_COMMENTS_KEY: [comment.body for comment in issue.get_comments()],
                             }
 
-                            pr_entry[PR_ISSUE_CLOSED_KEY].append(issue_data)
+                            pr_entry[PR_CLOSED_ISSUES_KEY].append(issue_data)
 
                     # Get changed files in the PR
                     files = pr.get_files()
@@ -133,7 +133,7 @@ def scrape_repo(
                         # Write data to YAML file if conditions are met
                         if (
                             len(pr_entry[PR_CHANGED_FILES_KEY]) > 0
-                            and len(pr_entry[PR_ISSUE_CLOSED_KEY]) > 0
+                            and len(pr_entry[PR_CLOSED_ISSUES_KEY]) > 0
                         ):
                             if idx == 0:
                                 with open(output_file, "a") as file:

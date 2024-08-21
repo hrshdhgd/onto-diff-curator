@@ -5,7 +5,7 @@ PR_TITLE_KEY = "pr_title"
 PR_BODY_KEY = "pr_body"
 PR_LABELS_KEY = "pr_labels"
 PR_COMMENTS_KEY = "pr_comments"
-PR_ISSUE_CLOSED_KEY = "pr_closed_issue"
+PR_CLOSED_ISSUES_KEY = "pr_closed_issues"
 PR_CHANGED_FILES_KEY = "pr_changed_files"
 
 ISSUE_NUMBER_KEY ="issue_number"
