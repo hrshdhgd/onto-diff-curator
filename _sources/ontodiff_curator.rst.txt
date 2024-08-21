@@ -12,6 +12,14 @@ ontodiff\_curator.cli module
    :undoc-members:
    :show-inheritance:
 
+ontodiff\_curator.constants module
+----------------------------------
+
+.. automodule:: ontodiff_curator.constants
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 ontodiff\_curator.main module
 -----------------------------
 

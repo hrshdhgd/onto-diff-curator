@@ -49,6 +49,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ontodiff_curator package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-ontodiff_curator.cli">ontodiff_curator.cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ontodiff_curator.constants">ontodiff_curator.constants module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-ontodiff_curator.main">ontodiff_curator.main module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ontodiff_curator.main.analyze_repo"><code class="docutils literal notranslate"><span class="pre">analyze_repo()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ontodiff_curator.main.scrape_repo"><code class="docutils literal notranslate"><span class="pre">scrape_repo()</span></code></a></li>
@@ -102,6 +103,9 @@
 <span id="ontodiff-curator-cli-module"></span><h2>ontodiff_curator.cli module<a class="headerlink" href="#module-ontodiff_curator.cli" title="Link to this heading"></a></h2>
 <p>Command line interface for ontodiff-curator.</p>
 </section>
+<section id="module-ontodiff_curator.constants">
+<span id="ontodiff-curator-constants-module"></span><h2>ontodiff_curator.constants module<a class="headerlink" href="#module-ontodiff_curator.constants" title="Link to this heading"></a></h2>
+</section>
 <section id="module-ontodiff_curator.main">
 <span id="ontodiff-curator-main-module"></span><h2>ontodiff_curator.main module<a class="headerlink" href="#module-ontodiff_curator.main" title="Link to this heading"></a></h2>
 <p>Main module for the OntoDiffCurator package.</p>
@@ -124,7 +128,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ontodiff_curator.main.scrape_repo">
-<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.main.</span></span><span class="sig-name descname"><span class="pre">scrape_repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_pr_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_pr_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pr_status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'closed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.main.scrape_repo" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.main.</span></span><span class="sig-name descname"><span class="pre">scrape_repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_pr_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_pr_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pr_status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'merged'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.main.scrape_repo" title="Link to this definition"></a></dt>
 <dd><p>Get pull requests and corresponding issues they close along with the ontology resource files.</p>
 <p>We collect the URLs of the resource files in the PR and also the main branch just before the PR was merged.</p>
 <dl class="field-list simple">
@@ -161,7 +165,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ontodiff_curator.utils.download_file">
-<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.utils.</span></span><span class="sig-name descname"><span class="pre">download_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.utils.download_file" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">ontodiff_curator.utils.</span></span><span class="sig-name descname"><span class="pre">download_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ontodiff_curator.utils.download_file" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
