@@ -18,6 +18,7 @@ from oaklib.io.streaming_kgcl_writer import StreamingKGCLWriter
 
 from ontodiff_curator.constants import (
     CHANGED_FILES_KEY,
+    CHANGES_KEY,
     FILENAME_KEY,
     ISSUE_BODY_KEY,
     ISSUE_COMMENTS_KEY,
@@ -281,7 +282,7 @@ def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, o
                 all_changes = output.getvalue().splitlines()
             # Create a new YAML file with the changes
             output_dict = {key: value for key, value in dictionary.items() if key != PR_CHANGED_FILES_KEY}
-            output_dict[CHANGED_FILES_KEY] = all_changes
+            output_dict[CHANGES_KEY] = all_changes
             (
                 yaml.dump({PULL_REQUESTS_KEY: [output_dict]}, of)
                 if idx == 0
