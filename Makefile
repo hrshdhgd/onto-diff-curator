@@ -1,94 +1,76 @@
-# -----------------------------------------------------------------------------
-# Makefile for Scraping and Analyzing Repositories
+# This Makefile provides commands to scrape and analyze multiple repositories.
 #
-# This Makefile allows you to run scrapes and analyses on individual repositories 
-# as well as all repositories cumulatively. The list of repositories is defined 
-# in the REPOS, OBO_REPOS, and OWL_REPOS variables.
+# Available Commands:
+# 
+# 1. make scrape
+#    - Scrapes all listed repositories.
 #
-# Usage:
-#   - To scrape all repositories: 
-#       make scrape
-#       or
-#       make scrape-all
+# 2. make analyze
+#    - Analyzes all listed repositories.
 #
-#   - To scrape an individual repository, use:
-#       make <repo>
-#     Example:
-#       make monarch-initiative/mondo
-#       make geneontology/go-ontology
+# 3. make <repository-name>-scrape
+#    - Scrapes a specific repository. Replace <repository-name> with the actual name, e.g., monarch-initiative/mondo-scrape.
 #
-#   - To analyze OBO repositories:
-#       make analyze-obo
+# 4. make <repository-name>-analyze
+#    - Analyzes a specific repository. Replace <repository-name> with the actual name, e.g., monarch-initiative/mondo-analyze.
 #
-#   - To analyze OWL repositories:
-#       make analyze-owl
+# 5. make scrapalyze REPO=<repository-name>
+#    - Scrapes and then analyzes a specific repository. Replace <repository-name> with the actual name, e.g., REPO=monarch-initiative/mondo.
 #
-#   - To analyze all repositories:
-#       make analyze-all
-#
-# Variables:
-#   GITHUB_ACCESS_TOKEN - Your GitHub access token for authentication.
-#
-# Targets:
-#   - scrape-all: Default target to scrape all repositories.
-#   - scrape: Phony target to scrape all repositories (alias for 'scrape-all').
-#   - Individual repository targets: Each repository in REPOS has its own target.
-#   - analyze-obo: Target to analyze all OBO repositories.
-#   - analyze-owl: Target to analyze all OWL repositories.
-#   - analyze-all: Target to analyze all repositories.
-#
-# Notes:
-#   - The .PHONY directive is used to declare non-file targets to avoid conflicts
-#     with files of the same name.
-# -----------------------------------------------------------------------------
+# List of Repositories:
+# - monarch-initiative/mondo
+# - geneontology/go-ontology
+# - EnvironmentOntology/envo
+# - obophenotype/cell-ontology
+# - obophenotype/uberon
+# - pato-ontology/pato
 
 # List of repositories
-REPOS := monarch-initiative/mondo \
-		 geneontology/go-ontology \
-		 EnvironmentOntology/envo \
-		 obophenotype/cell-ontology \
-		 obophenotype/uberon \
-		 pato-ontology/pato
-
-OBO_REPOS := pato-ontology/pato \
-			 obophenotype/uberon \
-			 geneontology/go-ontology \
-			 monarch-initiative/mondo
-
-OWL_REPOS := obophenotype/cell-ontology \
-			 EnvironmentOntology/envo
-
-# Default target to scrape all repositories
-scrape-all: $(REPOS)
+REPOS := \
+	monarch-initiative/mondo \
+	geneontology/go-ontology \
+	EnvironmentOntology/envo \
+	obophenotype/cell-ontology \
+	obophenotype/uberon \
+	pato-ontology/pato
 
 # Target to scrape individual repositories
-$(REPOS):
-	@echo "Starting scrape for repo $@..."
-	@time ontodiff scrape --repo $@ --token $(GITHUB_ACCESS_TOKEN) > /dev/null 2>&1
-	@echo "Scrape completed for repo $@."
+.PHONY: $(addsuffix -scrape, $(REPOS))
+$(addsuffix -scrape, $(REPOS)):
+	@repo=$(subst -scrape,,$@); \
+	echo "Starting scrape for repo $$repo..."; \
+	time ontodiff scrape --repo $$repo --token $(GITHUB_ACCESS_TOKEN) > /dev/null 2>&1; \
+	echo "Scrape completed for repo $$repo."
 
 # Phony target to scrape all repositories cumulatively
+.PHONY: scrape-all
+scrape-all: $(addsuffix -scrape, $(REPOS))
+
+# Phony target to scrape all repositories using 'scrape-all'
+.PHONY: scrape
 scrape: scrape-all
 
-# Target to analyze OBO repositories
-analyze-obo: $(OBO_REPOS)
+# Target to analyze individual repositories
+.PHONY: $(addsuffix -analyze, $(REPOS))
+$(addsuffix -analyze, $(REPOS)):
+	@repo=$(subst -analyze,,$@); \
+	echo "Starting analysis for repo $$repo..."; \
+	time ontodiff analyze --repo $$repo --token $(GITHUB_ACCESS_TOKEN) > /dev/null 2>&1; \
+	echo "Analysis completed for repo $$repo."
 
-# Target to analyze individual OBO repositories
-$(OBO_REPOS):
-	@echo "Starting analysis for repo $@..."
-	@time ontodiff analyze --repo $@
-	@echo "Analysis completed for repo $@."
+# Phony target to analyze all repositories cumulatively
+.PHONY: analyze-all
+analyze-all: $(addsuffix -analyze, $(REPOS))
 
-# Target to analyze OWL repositories
-analyze-owl: $(OWL_REPOS)
+# Phony target to analyze all repositories using 'analyze-all'
+.PHONY: analyze
+analyze: analyze-all
 
-# Target to analyze individual OWL repositories
-$(OWL_REPOS):
-	@echo "Starting analysis for repo $@..."
-	@time ontodiff analyze --repo $@
-	@echo "Analysis completed for repo $@."
-
-# Target to analyze all repositories
-analyze-all: analyze-obo analyze-owl
-
-.PHONY: scrape-all scrape $(REPOS) analyze-obo analyze-owl analyze-all $(OBO_REPOS) $(OWL_REPOS)
+# Phony target to scrape and then analyze a specific repository
+.PHONY: scrapalyze
+scrapalyze:
+	@echo "Starting scrape and analyze for repo $(REPO)..."
+	@time ontodiff scrape --repo $(REPO) --token $(GITHUB_ACCESS_TOKEN) > /dev/null 2>&1
+	@echo "Scrape completed for repo $(REPO)."
+	@time ontodiff analyze --repo $(REPO) --token $(GITHUB_ACCESS_TOKEN) > /dev/null 2>&1
+	@echo "Analyze completed for repo $(REPO)."
