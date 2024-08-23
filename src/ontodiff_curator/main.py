@@ -215,20 +215,17 @@ def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, o
         mode = "w"
     else:
         mode = "a"
+
+    first_change_found = False
     # Analyze data
     with open(output_file, mode) as of:
         if overwrite:
             yaml.dump(metadata, of)
         start_analyzing = from_pr is None
 
-        try:
-            list_of_dicts = data[PULL_REQUESTS_KEY]
-        except TypeError:
-            import pdb
+        list_of_dicts = data[PULL_REQUESTS_KEY]
 
-            pdb.set_trace()
-
-        for idx, dictionary in enumerate(list_of_dicts):
+        for dictionary in list_of_dicts:
             pr_number_int = int(dictionary[PR_NUMBER_KEY].strip("pr"))  # Extract PR number from the key
             if from_pr and not start_analyzing:
                 if pr_number_int == from_pr:
@@ -269,6 +266,7 @@ def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, o
                 # continue  # Skip this file and move to the next iteration
 
             all_changes = []
+            
             # Create an in-memory file-like object and use it within a 'with' statement
             with io.StringIO() as output:
                 # Instantiate StreamingKGCLWriter with the in-memory file-like object
@@ -283,11 +281,13 @@ def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, o
             # Create a new YAML file with the changes
             output_dict = {key: value for key, value in dictionary.items() if key != PR_CHANGED_FILES_KEY}
             output_dict[CHANGES_KEY] = all_changes
-            (
-                yaml.dump({PULL_REQUESTS_KEY: [output_dict]}, of)
-                if idx == 0
-                else yaml.dump([output_dict], of, default_flow_style=False, indent=2)
-            )
+            if len(output_dict[CHANGES_KEY]) > 0:
+                if not first_change_found:
+                    yaml.dump({PULL_REQUESTS_KEY: [output_dict]}, of)
+                    first_change_found = True
+                else:
+                    yaml.dump([output_dict], of, default_flow_style=False, indent=2)
+
             # delete new and old files
             shutil.rmtree(TMP_DIR)
             makedirs(TMP_DIR, exist_ok=True)
