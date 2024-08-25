@@ -17,7 +17,6 @@ from oaklib import get_adapter
 from oaklib.io.streaming_kgcl_writer import StreamingKGCLWriter
 
 from ontodiff_curator.constants import (
-    CHANGED_FILES_KEY,
     CHANGES_KEY,
     FILENAME_KEY,
     ISSUE_BODY_KEY,
@@ -230,7 +229,7 @@ def analyze_repo(repo: str, token: str, output_file: str, overwrite: bool = True
     else:
         mode = "a"
         first_change_found = True
-        
+
     # Analyze data
     with open(output_file, mode) as of:
         if overwrite:
@@ -274,7 +273,7 @@ def analyze_repo(repo: str, token: str, output_file: str, overwrite: bool = True
                 # continue  # Skip this file and move to the next iteration
 
             all_changes = []
-            
+
             # Create an in-memory file-like object and use it within a 'with' statement
             with io.StringIO() as output:
                 # Instantiate StreamingKGCLWriter with the in-memory file-like object
