@@ -80,11 +80,10 @@ def scrape(
 @repo_option
 @token_option
 @output_option
-@from_pr_option
 @overwrite_option
-def analyze(repo: str, token: str, output_file: Union[Path, str], from_pr: int, overwrite: bool):
+def analyze(repo: str, token: str, output_file: Union[Path, str], overwrite: bool):
     """Run the ontodiff-curator's analyze command."""
-    analyze_repo(repo, token, output_file, from_pr, overwrite)
+    analyze_repo(repo, token, output_file, overwrite)
 
 
 if __name__ == "__main__":

@@ -186,7 +186,7 @@ def scrape_repo(
     logging.info(f"Scrape completed for repo: {repo}")
 
 
-def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, overwrite: bool = True) -> None:
+def analyze_repo(repo: str, token: str, output_file: str, overwrite: bool = True) -> None:
     """
     Structure the pull request data and analyze the changes in the ontology files.
 
@@ -210,28 +210,36 @@ def analyze_repo(repo: str, token: str, output_file: str, from_pr: int = None, o
         "code_version": "0.0.1",  # Replace with actual version if available
         "github_url": f"https://github.com/{repo}",
     }
-    if output_file.exists() and (overwrite or not from_pr):
-        Path(output_file).unlink()
-        mode = "w"
+
+    if output_file.exists():
+        if overwrite:
+            Path(output_file).unlink()
+            mode = "w"
+            first_change_found = False
+        else:
+            pr_numbers_scraped = {int(pr[PR_NUMBER_KEY].strip("pr")) for pr in data[PULL_REQUESTS_KEY]}
+            with open(output_file, "r") as of:
+                analyzed_data = yaml.safe_load(of)
+            pr_numbers_analyzed = {int(pr[PR_NUMBER_KEY].strip("pr")) for pr in analyzed_data[PULL_REQUESTS_KEY]}
+            if pr_numbers_scraped == pr_numbers_analyzed:
+                logging.info(f"All data already analyzed for repo: {repo}")
+                return
+            pr_remaining = pr_numbers_scraped - pr_numbers_analyzed
+            mode = "a"
+            first_change_found = True
     else:
         mode = "a"
-
-    first_change_found = False
+        first_change_found = True
+        
     # Analyze data
     with open(output_file, mode) as of:
         if overwrite:
             yaml.dump(metadata, of)
-        start_analyzing = from_pr is None
-
-        list_of_dicts = data[PULL_REQUESTS_KEY]
+            list_of_dicts = data[PULL_REQUESTS_KEY]
+        else:
+            list_of_dicts = [d for d in data[PULL_REQUESTS_KEY] if int(d[PR_NUMBER_KEY].strip("pr")) in pr_remaining]
 
         for dictionary in list_of_dicts:
-            pr_number_int = int(dictionary[PR_NUMBER_KEY].strip("pr"))  # Extract PR number from the key
-            if from_pr and not start_analyzing:
-                if pr_number_int == from_pr:
-                    start_analyzing = True
-                else:
-                    continue
             url_in_pr = dictionary[PR_CHANGED_FILES_KEY][0][URL_IN_PR_KEY]
             url_on_main = dictionary[PR_CHANGED_FILES_KEY][0][URL_IN_MAIN_KEY]
             extension = url_in_pr.split(".")[-1]
