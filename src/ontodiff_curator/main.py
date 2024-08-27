@@ -157,11 +157,11 @@ def scrape_repo(
                         if len(pr_entry[PR_CHANGED_FILES_KEY]) > 0 and len(pr_entry[PR_CLOSED_ISSUES_KEY]) > 0:
                             if not first_line_written:
                                 with open(output_file, "a") as file:
-                                    yaml.dump({PULL_REQUESTS_KEY: [pr_entry]}, file)
+                                    yaml.dump({PULL_REQUESTS_KEY: [pr_entry]}, file, sort_keys=False)
                                 first_line_written = True
                             else:
                                 with open(output_file, "a") as file:
-                                    yaml.dump([pr_entry], file, default_flow_style=False, indent=2)
+                                    yaml.dump([pr_entry], file, default_flow_style=False, indent=2, sort_keys=False)
                             logging.info(f"Data for PR #{pr.number} written to {output_file}")
                 else:
                     logging.info(f"No issues linked to PR #{pr.number}")
