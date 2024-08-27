@@ -17,6 +17,9 @@
 # 5. make scrapalyze REPO=<repository-name>
 #    - Scrapes and then analyzes a specific repository. Replace <repository-name> with the actual name, e.g., REPO=monarch-initiative/mondo.
 #
+# 6. make scrapalyze-all
+#    - Scrapes and then analyzes all listed repositories.
+#
 # List of Repositories:
 # - monarch-initiative/mondo
 # - geneontology/go-ontology
@@ -74,3 +77,14 @@ scrapalyze:
 	@echo "Scrape completed for repo $(REPO)."
 	@time ontodiff analyze --repo $(REPO) --token $(GITHUB_ACCESS_TOKEN) > /dev/null 2>&1
 	@echo "Analyze completed for repo $(REPO)."
+
+# Phony target to scrape and then analyze all repositories
+.PHONY: scrapalyze-all
+scrapalyze-all:
+	@for repo in $(REPOS); do \
+		echo "Starting scrape and analyze for repo $$repo..."; \
+		time ontodiff scrape --repo $$repo --token $(GITHUB_ACCESS_TOKEN) > /dev/null 2>&1; \
+		echo "Scrape completed for repo $$repo."; \
+		time ontodiff analyze --repo $$repo --token $(GITHUB_ACCESS_TOKEN) > /dev/null 2>&1; \
+		echo "Analyze completed for repo $$repo."; \
+	done
