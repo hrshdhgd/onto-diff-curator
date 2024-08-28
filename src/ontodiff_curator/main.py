@@ -290,10 +290,10 @@ def analyze_repo(repo: str, token: str, output_file: str, overwrite: bool = True
             output_dict[CHANGES_KEY] = all_changes
             if len(output_dict[CHANGES_KEY]) > 0:
                 if not first_change_found:
-                    yaml.dump({PULL_REQUESTS_KEY: [output_dict]}, of)
+                    yaml.dump({PULL_REQUESTS_KEY: [output_dict]}, of, sort_keys=False)
                     first_change_found = True
                 else:
-                    yaml.dump([output_dict], of, default_flow_style=False, indent=2)
+                    yaml.dump([output_dict], of, default_flow_style=False, indent=2, sort_keys=False)
 
             # delete new and old files
             shutil.rmtree(TMP_DIR)
