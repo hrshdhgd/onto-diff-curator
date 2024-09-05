@@ -1,5 +1,7 @@
 # ontodiff-curator
 
+[![DOI](https://zenodo.org/badge/842244676.svg)](https://zenodo.org/doi/10.5281/zenodo.13694123)
+
 Curates differences in ontology resources during pull requests in KGCL format using [oaklib](https://github.com/INCATools/ontology-access-kit).
 
 Currently curates diff for the following:
